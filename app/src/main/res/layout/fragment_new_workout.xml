@@ -1,0 +1,187 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
+    android:background="@android:color/background_light">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        />
+
+        <TextView
+            android:text="New Workout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHeader"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/ivNewWorkoutImage" />
+
+        <Button
+            android:text="Upload Photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bUploadWorkoutPhoto" />
+
+        <TextView
+            android:text="Repititions are the number of times you will complete the movements for each exercise. Sets are the number of times you will complete a set of repitions."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etWorkoutName"
+            android:hint="Name" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise1"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etReps1"
+            android:hint="Repititions"
+            android:inputType="number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etSets1"
+            android:hint="Sets" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise2"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etReps2"
+            android:hint="Repititions"
+            android:inputType="number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etSets2"
+            android:hint="Sets" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise3"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etReps3"
+            android:hint="Repititions"
+            android:inputType="number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etSets3"
+            android:hint="Sets"
+            android:inputType="number" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise4"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etReps4"
+            android:hint="Repititions"
+            android:inputType="number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etSets4"
+            android:hint="Sets"
+            android:inputType="number" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise5"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etReps5"
+            android:hint="Repititions"
+            android:inputType="number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etSets5"
+            android:hint="Sets"
+            android:inputType="number" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise6"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etReps6"
+            android:hint="Repititions"
+            android:inputType="number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etSets6"
+            android:hint="Sets" />
+
+        <Button
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bSaveNewWorkout" />
+
+
+    </LinearLayout>
+</ScrollView>

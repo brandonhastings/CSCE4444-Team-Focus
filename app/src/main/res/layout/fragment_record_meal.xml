@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.bhastings.workoutwithfriends.RecordMealFragment"
+    android:background="@android:color/background_light"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What Meal Did You Have?"
+        android:id="@+id/textView4"
+        android:textSize="36sp"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinner6"
+        android:layout_height="50dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
+
+    <TextView
+        android:text="How Many Calories?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHeading2"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText" />
+
+    <Button
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bSubmitMeal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <ImageView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"></ImageView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.bhastings.workoutwithfriends.HomeFragment"
+    android:background="@android:color/background_light"
+    tools:backgroundTintMode="screen">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Workout with Friends!"
+        android:id="@+id/tvGreeting"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Recent Activities"
+            android:layout_width="match_parent"
+            android:id="@+id/bRecentActivities"
+            android:layout_height="75dp" />
+
+        <Button
+            android:text="Friends"
+            android:layout_width="match_parent"
+            android:id="@+id/bFriends"
+            android:layout_weight="1"
+            android:layout_height="75dp" />
+
+        <Button
+            android:text="Record a Meal"
+            android:layout_width="match_parent"
+            android:id="@+id/bRecordAMeal"
+            android:layout_height="75dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Recent Activity 1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/bRecent1"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Recent Activity 2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/bRecent2"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Recent Activity 3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/bRecent3"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Begin Workout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/bStartWorkout" />
+    </LinearLayout>
+
+</LinearLayout>

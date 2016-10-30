@@ -1,0 +1,78 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
+    android:background="@android:color/background_light">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:id="@+id/ivProfilePic" />
+
+        <TextView
+            android:text="Edit Profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEditProfile"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textSize="30sp"
+            android:id="@+id/etName" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:textSize="30sp"
+            android:id="@+id/etAge" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight:"
+            android:textSize="30sp"
+            android:id="@+id/etWeight" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Height:"
+            android:textSize="30sp"
+            android:id="@+id/etHeight" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bio:"
+            android:textSize="30sp"
+            android:id="@+id/etBio" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Workouts:"
+            android:textSize="30sp"
+            android:id="@+id/etWorkouts" />
+    </LinearLayout>
+</ScrollView>

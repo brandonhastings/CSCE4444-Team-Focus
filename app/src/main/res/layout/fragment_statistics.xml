@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bhastings.workoutwithfriends.StatisticsFragment"
+    android:background="@android:color/background_light"
+    android:backgroundTintMode="screen">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Statistics"
+            android:id="@+id/textView2"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <TextView
+            android:text="Your statistics are where you can see your progress and finess milestones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <Button
+                android:text="Diet Statistics"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:id="@+id/bDietStats"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <Button
+                android:text="Workout Statistics"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:id="@+id/bWorkoutStats"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
