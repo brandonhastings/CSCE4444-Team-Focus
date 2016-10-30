@@ -100,7 +100,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:ems="11"
             android:id="@+id/etReps3"
             android:hint="Repititions"
             android:inputType="number" />
