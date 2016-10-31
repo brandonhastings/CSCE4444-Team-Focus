@@ -51,20 +51,29 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etWorkoutName"
+            android:id="@+id/etExerciseName"
             android:hint="Name" />
+
+        <TextView
+            android:text="Type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" />
 
         <Spinner
             android:layout_width="match_parent"
             android:id="@+id/sExerciseType"
-            android:layout_height="40dp" />
+            android:layout_height="40dp"
+            android:entries="@array/ExerciseTypes"
+            android:spinnerMode="dropdown"
+            style="@android:style/Widget.Spinner.DropDown" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/etTime"
+            android:id="@+id/etExerciseTime"
             android:hint="Time (minutes)" />
 
         <EditText
@@ -72,20 +81,28 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/etDistance"
+            android:id="@+id/etExerciseDistance"
             android:hint="Distance  (miles)" />
+
+        <TextView
+            android:text="Muscle Group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:id="@+id/sMuscleGroup" />
+            android:id="@+id/sExerciseMuscleGroup"
+            style="@android:style/Widget.Spinner.DropDown"
+            android:entries="@array/MuscleGroups" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/etWeight"
+            android:id="@+id/etExerciseWeight"
             android:hint="Weight (lbs)" />
 
         <Button

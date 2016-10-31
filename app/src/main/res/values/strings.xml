@@ -7,6 +7,32 @@
 
     <string name="action_settings">Settings</string>
 
+    <!-- String array used for Recording a meal -->
+    <string-array name="Meals">
+        <item name = "Breakfast">Breakfast</item>
+        <item name = "Lunch">Lunch</item>
+        <item name = "Dinner">Dinner</item>
+        <item name = "Snack">Snack</item>
+    </string-array>
+
+    <string-array name="ExerciseTypes">
+        <item name = "Stationary">Stationary</item>
+        <item name = "Mobile">Mobile</item>
+    </string-array>
+
+    <string-array name="MuscleGroups">
+        <item name = "Biceps">Biceps</item>
+        <item name = "Back">Back</item>
+        <item name = "Legs">Legs</item>
+        <item name = "Delts">Delts</item>
+        <item name = "Shoulders">Shoulders</item>
+        <item name = "Chest">Chest</item>
+        <item name = "Triceps">Triceps</item>
+        <item name = "Abs">Abs</item>
+        <item name = "Trapezius">Trapezius</item>
+        <item name = "Run">Run</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -19,8 +19,11 @@
 
     <Spinner
         android:layout_width="match_parent"
-        android:id="@+id/spinner6"
-        android:layout_height="50dp" />
+        android:id="@+id/mealSpinner"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/Meals"
+        style="@android:style/Widget.Spinner.DropDown" />
 
     <Space
         android:layout_width="match_parent"
@@ -39,7 +42,12 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText" />
+
+        android:id="@+id/etCaloriesEntered" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
 
     <Button
         android:text="Submit"
@@ -54,10 +62,6 @@
     <ImageView
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="146dp"></ImageView>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="15dp" />
+        android:layout_height="match_parent"></ImageView>
 
 </LinearLayout>
