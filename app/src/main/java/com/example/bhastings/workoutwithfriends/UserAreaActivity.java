@@ -25,6 +25,7 @@ import java.util.ArrayList;
 public class UserAreaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,7 @@ public class UserAreaActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -120,6 +122,7 @@ public class UserAreaActivity extends AppCompatActivity
             manager.beginTransaction().replace(R.id.content_user_area, statisticsFragment).commit();
 
         } else if (id == R.id.nav_logout) {
+            //go to logout Fragment
             LogoutFragment logoutFragment = new LogoutFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, logoutFragment).commit();

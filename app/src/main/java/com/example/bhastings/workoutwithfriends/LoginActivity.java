@@ -12,6 +12,7 @@ import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,11 @@ public class LoginActivity extends AppCompatActivity {
         registerLink.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+
+                //register user's data with the database
+                User user = new User(null, null);
+
+
                 Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(registerIntent);
             }
