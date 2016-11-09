@@ -13,7 +13,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText etUsername, etFirstName, etLastName, etPassword, etReEnterPassword; //edit text fields
     Button bRegister; //register button
-    String username, firstname, lastname, password; //returned from the getLoggedInUser function
+    String username, firstname, lastname, password, reEnterPassword; //returned from the getLoggedInUser function
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,32 +26,32 @@ public class RegisterActivity extends AppCompatActivity {
         etLastName = (EditText) findViewById(R.id.etLastName);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etReEnterPassword = (EditText) findViewById(R.id.etReEnterPassword);
-        bRegister = (Button) findViewById(R.id.bRegister);
+        bRegister = (Button) findViewById(R.id.bRegister);}
 
-        bRegister.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
+        public void userReg(View v){
 
-                String username = etUsername.getText().toString();
-                String firstname = etFirstName.getText().toString();
-                String lastname = etLastName.getText().toString();
-                String password = etPassword.getText().toString();
-                String reEnterPassword = etReEnterPassword.getText().toString();
+        username = etUsername.getText().toString();
+        firstname = etFirstName.getText().toString();
+        lastname = etLastName.getText().toString();
+        password = etPassword.getText().toString();
+        reEnterPassword = etReEnterPassword.getText().toString();
 
-                //if passwords match
-                if(password.equals(reEnterPassword)) {
+            //if passwords match
+        if(password.equals(reEnterPassword)) {
 
-                    //show main screen
-                    Intent registerIntent = new Intent(RegisterActivity.this, UserAreaActivity.class);
-                    RegisterActivity.this.startActivity(registerIntent);
+            String method = "register";
+            BackgroundTask backgroundTask = new BackgroundTask(this);
+            backgroundTask.execute(method, username, password, firstname, lastname);
+            finish();
 
-                }
-                else{
-                    Toast.makeText(getApplicationContext(), "Error: Passwords to not match", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+            //show main screen
+            Intent registerIntent = new Intent(RegisterActivity.this, UserAreaActivity.class);
+            RegisterActivity.this.startActivity(registerIntent);
 
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Error: Passwords to not match", Toast.LENGTH_LONG).show();
+        }
     }
 
 }
