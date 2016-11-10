@@ -134,8 +134,6 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
             Toast.makeText(context, result, Toast.LENGTH_LONG).show();
         }
 
-
     }
-
 
 }
