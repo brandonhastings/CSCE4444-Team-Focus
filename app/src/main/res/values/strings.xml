@@ -33,7 +33,38 @@
         <item name = "Run">Run</item>
     </string-array>
 
-
+    <string-array name="Exercises">
+        <item name = "Dancing">Dancing</item>
+        <item name = "Gardening">Gardening</item>
+        <item name = "GolfClubs">Golf - Carrying clubs</item>
+        <item name = "GolfCart">Golf - Using Cart</item>
+        <item name = "HeavyLifting > 75lbs">Heavy Lifting > 75lbs</item>
+        <item name = "Hiking">Hiking</item>
+        <item name = "MartialArts">Martial Arts</item>
+        <item name = "MowingLawn">Mowing Lawn - Power Mower</item>
+        <item name = "PlayingWKids">Playing with Kids</item>
+        <item name = "Racquetball">Racquetball</item>
+        <item name = "Reading">Reading - Sitting</item>
+        <item name = "RockClimbing">Rock Climbing</item>
+        <item name = "JumpRope">Jump Rope</item>
+        <item name = "Shopping">Shopping</item>
+        <item name = "ShovelingSnow">Shoveling Snow</item>
+        <item name = "Sitting">Sitting - Light Office Work</item>
+        <item name = "Skiing">Skiing - Downhill</item>
+        <item name = "Sleeping">Sleeping</item>
+        <item name = "Soccer">Soccer</item>
+        <item name = "Baseball">Baseball</item>
+        <item name = "Softball">Softball</item>
+        <item name = "Stairmaster">Stairmaster</item>
+        <item name = "Swimming">Swimming Laps</item>
+        <item name = "Tennis">Tennis</item>
+        <item name = "WalkingSlow">Walking - 15 minute mile</item>
+        <item name = "WalkingMedium">Walking - 20 minute mile</item>
+        <item name = "WatchingTV">WatchingTV</item>
+        <item name = "WeightLifting">Weight Lifting - Light</item>
+        <item name = "WeightLifting">Weight Lifting - Vigorous</item>
+        <item name = "Yoga">Yoga - Mild</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

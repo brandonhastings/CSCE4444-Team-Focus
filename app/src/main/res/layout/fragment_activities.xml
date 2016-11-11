@@ -50,11 +50,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvWorkoutsHeader" />
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lvWorkouts" />
-
         <TextView
             android:text="Workout 1"
             android:layout_width="match_parent"
@@ -62,17 +57,20 @@
             android:id="@+id/tvWorkoutTest"
             android:textSize="18sp" />
 
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvWorkouts" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
         <ImageView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:id="@+id/ivNewExerciseImage" />
-
-        <Button
-            android:text="New Exercise"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bNewExercise" />
 
         <TextView
             android:text="Your Exercises:"
@@ -80,17 +78,18 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvExerciseListHeader" />
 
-        <ListView
+        <Spinner
             android:layout_width="match_parent"
+            android:id="@+id/Exercise1"
             android:layout_height="wrap_content"
-            android:id="@+id/lvExercisesList" />
+            android:entries="@array/Exercises"
+            style="@android:style/Widget.Spinner.DropDown" />
 
-        <TextView
-            android:text="Exercise 1"
+        <Button
+            android:text="View Exercise Details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvExerciseTest"
-            android:textSize="18sp" />
+            android:id="@+id/bViewExerciseDetails" />
 
 
     </LinearLayout>

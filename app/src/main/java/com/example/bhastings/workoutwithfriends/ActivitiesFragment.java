@@ -42,17 +42,7 @@ public class ActivitiesFragment extends Fragment {
             }
         });
 
-        TextView tvExercise1 = (TextView) view.findViewById(R.id.tvExerciseTest);
-        tvExercise1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment Exercise1 = new ExerciseViewFragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_user_area, Exercise1);
-                fragmentTransaction.commit();
-            }
-        });
+
 
         Button bNewWorkout = (Button) view.findViewById(R.id.bNewWorkout);
         bNewWorkout.setOnClickListener(new View.OnClickListener() {
@@ -66,14 +56,14 @@ public class ActivitiesFragment extends Fragment {
             }
         });
 
-        Button bNewExercise = (Button) view.findViewById(R.id.bNewExercise);
+        Button bNewExercise = (Button) view.findViewById(R.id.bViewExerciseDetails);
         bNewExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment vNewExercise = new NewExerciseFragment();
+                Fragment vExerciseView = new ExerciseViewFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_user_area, vNewExercise);
+                fragmentTransaction.replace(R.id.content_user_area, vExerciseView);
                 fragmentTransaction.commit();
             }
         });

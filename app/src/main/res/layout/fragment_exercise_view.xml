@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvHeader"
             android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textSize="32sp" />
 
         <ImageView
             android:layout_gravity="center"
@@ -31,50 +31,115 @@
             android:id="@+id/ivNewWorkoutImage" />
 
         <TextView
-            android:text="Edit Exercise"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvEditExercise"
-            android:textAlignment="center" />
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/CaloriesBurnedheader"
+            android:hint="Calories Burned"
+            android:textSize="28sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <TextView
-            android:text="Created by: User"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvOwner"
-            android:textSize="12sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etRepCount"
-            android:hint="Reps" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etSets"
-            android:hint="Sets" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etWeight"
-            android:hint="Weight" />
-
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
             android:id="@+id/etTime"
             android:hint="Exercise Time Lenth (minutes)" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="120lbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv120" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/tv120"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="140lbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv140" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="160lbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv160" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="180lbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv180" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="200lbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv200" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="220lbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv220" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:textSize="24sp" />
 
 
     </LinearLayout>
