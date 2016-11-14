@@ -15,6 +15,7 @@ import android.widget.Button;
  */
 public class DietViewFragment extends Fragment {
 
+    String username;
 
     public DietViewFragment() {
         // Required empty public constructor
@@ -24,6 +25,9 @@ public class DietViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        username = this.getArguments().getString("username");
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_diet_view, container, false);
 

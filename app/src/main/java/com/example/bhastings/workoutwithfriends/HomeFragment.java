@@ -13,6 +13,7 @@ import android.view.ViewGroup;
  */
 public class HomeFragment extends Fragment {
 
+    String username;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -22,6 +23,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+       username = this.getArguments().getString("username");
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }

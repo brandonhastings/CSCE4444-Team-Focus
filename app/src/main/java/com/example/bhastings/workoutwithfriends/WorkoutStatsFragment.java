@@ -20,6 +20,7 @@ import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import lecho.lib.hellocharts.model.PieChartData;
@@ -36,43 +37,60 @@ import lecho.lib.hellocharts.view.PieChartView;
 
 public class WorkoutStatsFragment extends Fragment {
 
-  /* public void drawChart(){
-        float[] percentages = {13f, 7f, 5f, 5f, 10f, 20f, 3f, 6f, 11f, 10f};
-        String[] muscleGroups = {"Biceps", "Back", "Legs", "Delts", "Shoulders", "Chest", "Triceps", "Abs", "Trapezius", "Run"};
-
-       int[] colors = {Color.BLUE, Color.RED, Color.CYAN, Color.YELLOW, Color.GREEN, Color.GRAY, Color.MAGENTA, Color.rgb(255, 160, 0, ),Color.rgb(255,192,203), Color.rgb(222,184,135) };
-
-       CategorySeries distributionSeries = new CategorySeries("Muscle Groups");
-
-       for(int i = 0; i < percentages.length; i++){
-           distributionSeries.add(muscleGroups[i], percentages[i]);
-       }
-
-       DefaultRenderer defaultRenderer = new DefaultRenderer();
-       for(int i=0; i < percentages.length; i++){
-           SimpleSeriesRenderer seriesRenderer = new SimpleSeriesRenderer();
-           seriesRenderer.setColor(colors[i]);
-           seriesRenderer.setDisplayChartValues(true);
-
-           defaultRenderer.setBackgroundColor(Color.WHITE);
-           defaultRenderer.setLabelsTextSize(20f);
-           defaultRenderer.setLegendTextSize(20f);
-           defaultRenderer.setApplyBackgroundColor(true);
-
-           defaultRenderer.addSeriesRenderer(seriesRenderer);
-
-           defaultRenderer.setChartTitle("Workout Report (Week)");
-           defaultRenderer.setChartTitleTextSize(20);
-           defaultRenderer.setZoomButtonsVisible(false);
-
-           View workoutChart = ChartFactory.getPieChartView(getContext(), distributionSeries, defaultRenderer);
-       }
-   }
-*/
-
 
     public WorkoutStatsFragment() {
         // Required empty public constructor
+    }
+
+    float[] percentages = new float[9];
+    ArrayList<String> Workouts = new ArrayList<>();
+    String [] workouts = new String[9];
+    //String[] Workouts = {"Default1", "Default2", "Default3", "Custom1", "Custom2", "Custom3", "Run"};
+
+    String default1 = new String();
+    String default2 = new String();
+    String default3 = new String();
+    String custom1 = new String();
+    String custom2 = new String();
+    String custom3 = new String();
+    String custom4 = new String();
+    String custom5 = new String();
+    String run = new String();
+
+
+    public void fillPercentages(float[] percentages){
+        //fill percentages
+        for(int i=0; i<9; i++){
+            percentages[i] = (float) 1/9;
+        }
+    }
+
+    public void fillWorkouts(List<String> workouts, String[] Workouts){
+        //fill workouts
+
+        default1 = "Default1";
+        default2 = "Default2";
+        default3 = "Default3";
+        run = "Run";
+        workouts.add(default1);
+        workouts.add(default2);
+        workouts.add(default3);
+        workouts.add(run);
+
+        custom1 = "Custom1";
+        custom2 = "Custom2";
+        custom3 = "Custom3";
+        custom4 = "Custom4";
+        custom5 = "Custom5";
+        workouts.add(custom1);
+        workouts.add(custom2);
+        workouts.add(custom3);
+        workouts.add(custom4);
+        workouts.add(custom5);
+
+        for (int i=0; i<9; i++){
+            Workouts[i] = workouts.get(i);
+        }
     }
 
 
@@ -86,27 +104,32 @@ public class WorkoutStatsFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_workout_stats, container, false);
 
-        float[] percentages = {13f, 7f, 5f, 5f, 10f, 20f, 3f, 6f, 11f, 10f};
-        String[] muscleGroups = {"Biceps", "Back", "Legs", "Delts", "Shoulders", "Chest", "Triceps", "Abs", "Trapezius", "Run"};
+        fillWorkouts(Workouts, workouts);
+        //fillPercentages(percentages);
+
+        for(int i=0; i<9; i++){
+            percentages[i] = (float) 1/9;
+        }
+
 
         int[] colors = {Color.BLUE, Color.RED, Color.CYAN, Color.YELLOW, Color.GREEN, Color.GRAY, Color.MAGENTA, Color.rgb(255, 160, 0),Color.rgb(255,192,203), Color.rgb(222,184,135) };
 
-        CategorySeries distributionSeries = new CategorySeries("Muscle Groups");
+        CategorySeries distributionSeries = new CategorySeries("Workouts");
 
         for(int i = 0; i < percentages.length; i++){
-            distributionSeries.add(muscleGroups[i], percentages[i]);
+            distributionSeries.add(workouts[i], percentages[i]);
         }
 
         DefaultRenderer defaultRenderer = new DefaultRenderer();
         for(int i=0; i < percentages.length; i++) {
             SimpleSeriesRenderer seriesRenderer = new SimpleSeriesRenderer();
             seriesRenderer.setColor(colors[i]);
-            seriesRenderer.setDisplayChartValues(true);
+         //   seriesRenderer.setDisplayChartValues(true);
 
             defaultRenderer.setBackgroundColor(Color.WHITE);
             defaultRenderer.setLabelsTextSize(30f);
             defaultRenderer.setLabelsColor(Color.BLACK);
-            defaultRenderer.setLegendTextSize(28f);
+            defaultRenderer.setLegendTextSize(25f);
             defaultRenderer.setApplyBackgroundColor(true);
 
             defaultRenderer.addSeriesRenderer(seriesRenderer);
@@ -114,6 +137,7 @@ public class WorkoutStatsFragment extends Fragment {
             defaultRenderer.setChartTitle("Workout Report (Week)");
             defaultRenderer.setChartTitleTextSize(60);
             defaultRenderer.setZoomButtonsVisible(false);
+            defaultRenderer.setPanEnabled(false);
 
             LinearLayout chartContainer = (LinearLayout) view.findViewById(R.id.graphWorkout);
             View workoutChart = ChartFactory.getPieChartView(getContext(), distributionSeries, defaultRenderer);

@@ -16,6 +16,7 @@ import android.widget.Button;
  */
 public class AddWorkoutFragment extends Fragment {
 
+    String username;
 
     public AddWorkoutFragment() {
         // Required empty public constructor
@@ -25,6 +26,8 @@ public class AddWorkoutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        username = this.getArguments().getString("username");
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add_workout, container, false);
 

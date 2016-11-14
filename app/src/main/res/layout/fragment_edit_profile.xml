@@ -32,8 +32,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:id="@+id/etName"
-            android:hint="Name" />
+            android:id="@+id/etFirstName"
+            android:hint="First Name" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etLastName"
+            android:hint="Last Name" />
 
         <EditText
             android:layout_gravity="left"

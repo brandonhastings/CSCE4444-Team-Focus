@@ -44,6 +44,10 @@
             android:id="@+id/tvOwner"
             android:textSize="12sp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,13 +56,106 @@
             android:id="@+id/etWorkoutName"
             android:hint="Name" />
 
-        <EditText
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:text="Exercise 1:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/etWorkoutType"
-            android:hint="Type" />
+            android:id="@+id/textView17" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise1"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Exercise 2:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise2"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Exercise 3:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView19" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise3"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Exercise 4:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise4"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Exercise 5:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView21" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise5"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Exercise 6:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView22" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/Exercise6"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
 
 
     </LinearLayout>

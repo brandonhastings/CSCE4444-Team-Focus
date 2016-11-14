@@ -32,47 +32,106 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name:"
-            android:textSize="30sp"
+            android:textSize="14sp"
             android:id="@+id/etName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:layout_gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Age:"
-            android:textSize="30sp"
+            android:textSize="14sp"
             android:id="@+id/etAge" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAge"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:layout_gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Weight:"
-            android:textSize="30sp"
+            android:textSize="14sp"
             android:id="@+id/etWeight" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWeight"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:layout_gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Height:"
-            android:textSize="30sp"
+            android:textSize="14sp"
             android:id="@+id/etHeight" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHeight"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:layout_gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Bio:"
-            android:textSize="30sp"
+            android:textSize="14sp"
             android:id="@+id/etBio" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvBio"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:layout_gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Workouts:"
-            android:textSize="30sp"
+            android:textSize="14sp"
             android:id="@+id/etWorkouts" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvWorkouts" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
     </LinearLayout>
 </ScrollView>

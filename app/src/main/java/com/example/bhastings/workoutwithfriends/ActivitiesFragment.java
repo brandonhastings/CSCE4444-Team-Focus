@@ -17,6 +17,7 @@ import android.widget.TextView;
  */
 public class ActivitiesFragment extends Fragment {
 
+    String username;
 
     public ActivitiesFragment() {
         // Required empty public constructor
@@ -26,6 +27,9 @@ public class ActivitiesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        username = this.getArguments().getString("username");
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_activities, container, false);
 

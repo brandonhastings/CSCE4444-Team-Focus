@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         if(success){
                             //show main screen
-                            Intent registerIntent = new Intent(RegisterActivity.this, UserAreaActivity.class);
+                            Intent registerIntent = new Intent(RegisterActivity.this, LoginActivity.class);
                             RegisterActivity.this.startActivity(registerIntent);
                             Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_LONG).show();
                         }
@@ -70,6 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
                          //   Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_LONG).show();
                         }
                     } catch (JSONException e) {
+                        Log.e("log_tag", "Error converting result " + e.toString());
                         e.printStackTrace();
                     }
                 }

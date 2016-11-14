@@ -13,6 +13,7 @@ import android.view.ViewGroup;
  */
 public class FriendsListFragment extends Fragment {
 
+    String username;
 
     public FriendsListFragment() {
         // Required empty public constructor
@@ -22,6 +23,9 @@ public class FriendsListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        username = this.getArguments().getString("username");
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_friends_list, container, false);
     }

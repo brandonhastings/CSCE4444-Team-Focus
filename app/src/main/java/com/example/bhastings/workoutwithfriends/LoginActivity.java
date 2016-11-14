@@ -21,7 +21,8 @@ import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity{
 
-
+    String result = null;
+    StringBuilder sb = new StringBuilder();
 
     EditText etUsername, etPassword;
     String username, password;
@@ -55,11 +56,13 @@ public class LoginActivity extends AppCompatActivity{
                     try {
                         JSONObject jsonResponse = new JSONObject(response);
                         boolean success = jsonResponse.getBoolean("success");
+                        username = jsonResponse.getString("username");
 
                         if(success){
-                            Intent registerIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                            LoginActivity.this.startActivity(registerIntent);
+                            Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
+                            intent.putExtra("username", username);
                             Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_LONG).show();
+                            LoginActivity.this.startActivity(intent);
                         }
                         else{
                             AlertDialog.Builder alertDialog = new AlertDialog.Builder(LoginActivity.this);
@@ -68,6 +71,7 @@ public class LoginActivity extends AppCompatActivity{
                         }
 
                     } catch (JSONException e) {
+                        Log.e("log_tag", "Error converting result " + e.toString());
                         e.printStackTrace();
                     }
                 }

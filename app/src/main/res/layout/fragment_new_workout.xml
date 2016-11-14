@@ -37,10 +37,14 @@
             android:id="@+id/bUploadWorkoutPhoto" />
 
         <TextView
-            android:text="Repititions are the number of times you will complete the movements for each exercise. Sets are the number of times you will complete a set of repitions."
+            android:text="Workout Information:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6" />
+            android:id="@+id/tvWorkoutInfo" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -50,6 +54,16 @@
             android:id="@+id/etWorkoutName"
             android:hint="Name" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Exercise 1:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView17" />
+
         <Spinner
             android:layout_width="match_parent"
             android:id="@+id/Exercise1"
@@ -57,21 +71,15 @@
             android:entries="@array/Exercises"
             style="@android:style/Widget.Spinner.DropDown" />
 
-        <EditText
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etReps1"
-            android:hint="Repititions"
-            android:inputType="number" />
+            android:layout_height="10dp" />
 
-        <EditText
+        <TextView
+            android:text="Exercise 2:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etSets1"
-            android:hint="Sets" />
+            android:id="@+id/textView18" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -80,21 +88,15 @@
             style="@android:style/Widget.Spinner.DropDown"
             android:entries="@array/Exercises" />
 
-        <EditText
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etReps2"
-            android:hint="Repititions"
-            android:inputType="number" />
+            android:layout_height="10dp" />
 
-        <EditText
+        <TextView
+            android:text="Exercise 3:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etSets2"
-            android:hint="Sets" />
+            android:id="@+id/textView19" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -103,21 +105,15 @@
             style="@android:style/Widget.Spinner.DropDown"
             android:entries="@array/Exercises" />
 
-        <EditText
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etReps3"
-            android:hint="Repititions"
-            android:inputType="number" />
+            android:layout_height="10dp" />
 
-        <EditText
+        <TextView
+            android:text="Exercise 4:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etSets3"
-            android:hint="Sets"
-            android:inputType="number" />
+            android:id="@+id/textView20" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -126,21 +122,15 @@
             style="@android:style/Widget.Spinner.DropDown"
             android:entries="@array/Exercises" />
 
-        <EditText
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etReps4"
-            android:hint="Repititions"
-            android:inputType="number" />
+            android:layout_height="10dp" />
 
-        <EditText
+        <TextView
+            android:text="Exercise 5:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etSets4"
-            android:hint="Sets"
-            android:inputType="number" />
+            android:id="@+id/textView21" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -149,21 +139,15 @@
             style="@android:style/Widget.Spinner.DropDown"
             android:entries="@array/Exercises" />
 
-        <EditText
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etReps5"
-            android:hint="Repititions"
-            android:inputType="number" />
+            android:layout_height="10dp" />
 
-        <EditText
+        <TextView
+            android:text="Exercise 6:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etSets5"
-            android:hint="Sets"
-            android:inputType="number" />
+            android:id="@+id/textView22" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -172,21 +156,10 @@
             style="@android:style/Widget.Spinner.DropDown"
             android:entries="@array/Exercises" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/etReps6"
-            android:hint="Repititions"
-            android:inputType="number" />
 
-        <EditText
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etSets6"
-            android:hint="Sets" />
+            android:layout_height="25dp" />
 
         <Button
             android:text="Save"

@@ -1,6 +1,7 @@
 package com.example.bhastings.workoutwithfriends;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
@@ -25,17 +26,33 @@ import java.util.ArrayList;
 public class UserAreaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Bundle bundle = new Bundle();
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = this.getIntent();
+        String username;
+        username = intent.getStringExtra("username");
+
+        bundle.putString("username", username);
         setContentView(R.layout.activity_user_area);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle("Workout With Friends");
+
+        HomeFragment home = new HomeFragment();
+        home.setArguments(bundle);
+
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.content_user_area, new HomeFragment());
+        fragmentTransaction.replace(R.id.content_user_area, home);
         fragmentTransaction.commit();
+
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -89,35 +106,42 @@ public class UserAreaActivity extends AppCompatActivity
 
         if(id == R.id.nav_home) {
             HomeFragment homeFragment = new HomeFragment();
+            homeFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, homeFragment).commit();
         } else if (id == R.id.nav_view_profile) {
             ProfileFragment profileFragment = new ProfileFragment();
+            profileFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, profileFragment).commit();
 
         } else if (id == R.id.nav_friends_list) {
             FriendsListFragment friendsFragment = new FriendsListFragment();
+            friendsFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, friendsFragment).commit();
 
         } else if (id == R.id.nav_activities) {
             ActivitiesFragment activitiesFragment = new ActivitiesFragment();
+            activitiesFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, activitiesFragment).commit();
 
         } else if (id == R.id.nav_add_workout) {
             AddWorkoutFragment addWorkoutFragment = new AddWorkoutFragment();
+            addWorkoutFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, addWorkoutFragment).commit();
 
         } else if (id == R.id.nav_diet) {
             DietViewFragment dietFragment = new DietViewFragment();
+            dietFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, dietFragment).commit();
 
         } else if (id == R.id.nav_statistics) {
             StatisticsFragment statisticsFragment = new StatisticsFragment();
+            statisticsFragment.setArguments(bundle);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_user_area, statisticsFragment).commit();
 
