@@ -58,7 +58,7 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:id="@+id/bDietStats"
-                android:layout_weight="1" />
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <ImageView

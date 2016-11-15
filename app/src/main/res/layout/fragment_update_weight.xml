@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/etWeight" />
+        android:id="@+id/etWeightUpdate" />
 
     <Space
         android:layout_width="match_parent"

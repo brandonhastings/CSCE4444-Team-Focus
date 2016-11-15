@@ -18,6 +18,7 @@ import android.widget.TextView;
 public class ActivitiesFragment extends Fragment {
 
     String username;
+    Bundle bundle = new Bundle();
 
     public ActivitiesFragment() {
         // Required empty public constructor
@@ -38,6 +39,7 @@ public class ActivitiesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment Workout1 = new WorkoutViewFragment();
+                Workout1.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_user_area, Workout1);
@@ -53,6 +55,7 @@ public class ActivitiesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment vNewWorkout = new NewWorkoutFragment();
+                vNewWorkout.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_user_area, vNewWorkout);
@@ -65,6 +68,7 @@ public class ActivitiesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment vExerciseView = new ExerciseViewFragment();
+                vExerciseView.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_user_area, vExerciseView);

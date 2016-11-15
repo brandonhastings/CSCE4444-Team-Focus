@@ -16,6 +16,8 @@ import android.widget.Button;
  */
 public class NewWorkoutFragment extends Fragment {
 
+    String username;
+    Bundle bundle = new Bundle();
 
     public NewWorkoutFragment() {
         // Required empty public constructor
@@ -26,6 +28,8 @@ public class NewWorkoutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        username = this.getArguments().getString("username");
+
         View view = inflater.inflate(R.layout.fragment_new_workout, container, false);
 
         Button bSaveNewWorkout = (Button) view.findViewById(R.id.bSaveNewWorkout);
@@ -33,6 +37,7 @@ public class NewWorkoutFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment vActivitiesScreen2 = new ActivitiesFragment();
+                vActivitiesScreen2.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_user_area, vActivitiesScreen2);

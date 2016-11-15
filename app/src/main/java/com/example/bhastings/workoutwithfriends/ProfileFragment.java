@@ -43,7 +43,8 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        username = getArguments().getString("username");
+        username = this.getArguments().getString("username");
+        bundle.putString("username", username);
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
@@ -113,7 +114,7 @@ public class ProfileFragment extends Fragment {
 
                 Fragment editProfile = new EditProfileFragment();
 
-                bundle.putString("username", username);
+
                 editProfile.setArguments(bundle);
 
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

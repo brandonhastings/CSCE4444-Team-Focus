@@ -5,10 +5,13 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.jjoe64.graphview.GraphView;
@@ -36,6 +39,9 @@ import lecho.lib.hellocharts.view.PieChartView;
 
 
 public class WorkoutStatsFragment extends Fragment {
+
+    String username;
+    Bundle bundle = new Bundle();
 
 
     public WorkoutStatsFragment() {
@@ -100,6 +106,10 @@ public class WorkoutStatsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        username = this.getArguments().getString("username");
+        bundle.putString("username", username);
+
+
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_workout_stats, container, false);
@@ -144,6 +154,19 @@ public class WorkoutStatsFragment extends Fragment {
 
             chartContainer.addView(workoutChart);
 
+        Button bBackToStatsMenu = (Button) view.findViewById(R.id.bBackToStatsMenu);
+        bBackToStatsMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment vStats = new StatisticsFragment();
+                vStats.setArguments(bundle);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_user_area, vStats);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
 
             return view;
     }

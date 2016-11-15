@@ -13,6 +13,8 @@ import android.view.ViewGroup;
  */
 public class MealSubmissionConformationFragment extends Fragment {
 
+    String username;
+    Bundle bundle = new Bundle();
 
     public MealSubmissionConformationFragment() {
         // Required empty public constructor
@@ -22,6 +24,9 @@ public class MealSubmissionConformationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        username = this.getArguments().getString("username");
+        bundle.putString("username", username);
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_meal_submission_conformation, container, false);
     }

@@ -18,7 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -62,6 +65,11 @@ public class UserAreaActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View v = navigationView.getHeaderView(0);
+        TextView navMessage = (TextView) v.findViewById(R.id.navMessage);
+        navMessage.setText("Logged in as:");
+        TextView navUser = (TextView) v.findViewById(R.id.navUsername);
+        navUser.setText(username);
         navigationView.setNavigationItemSelectedListener(this);
 
     }

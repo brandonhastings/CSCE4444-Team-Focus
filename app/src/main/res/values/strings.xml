@@ -61,8 +61,8 @@
         <item name = "WalkingSlow">Walking - 15 minute mile</item>
         <item name = "WalkingMedium">Walking - 20 minute mile</item>
         <item name = "WatchingTV">WatchingTV</item>
-        <item name = "WeightLifting">Weight Lifting - Light</item>
-        <item name = "WeightLifting">Weight Lifting - Vigorous</item>
+        <item name = "WeightLiftingLight">Weight Lifting - Light</item>
+        <item name = "WeightLiftingVigorous">Weight Lifting - Vigorous</item>
         <item name = "Yoga">Yoga - Mild</item>
     </string-array>
 

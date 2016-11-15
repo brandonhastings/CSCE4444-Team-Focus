@@ -15,11 +15,23 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class RecordMealFragment extends Fragment {
+
+    String username;
+    Bundle bundle = new Bundle();
+
+    String meal, caloriesEntered;
 
 
     public RecordMealFragment() {
@@ -34,6 +46,10 @@ public class RecordMealFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        username = this.getArguments().getString("username");
+        bundle.putString("username", username);
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_record_meal, container, false);
 
@@ -52,18 +68,42 @@ public class RecordMealFragment extends Fragment {
                 }
                 else {
                     //store values from user
-                    String meal = (String) mealSpinner.getSelectedItem().toString();
-                    int caloriesEntered = Integer.parseInt(calories.getText().toString());
+                    meal = (String) mealSpinner.getSelectedItem().toString();
+                    caloriesEntered = (String) calories.getText().toString();
 
                     //send data to database
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonResponse = new JSONObject(response);
+                                boolean success = jsonResponse.getBoolean("success");
 
-                    //display confirmation screen
-                    Fragment vConfirmation = new MealSubmissionConformationFragment();
-                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.content_user_area, vConfirmation);
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+                                if(success){
+                                    Toast.makeText(getActivity(), "Meal has been confirmed.", Toast.LENGTH_LONG).show();
+
+                                    //display confirmation screen
+                                    Fragment vDiet = new DietFragment();
+                                    vDiet.setArguments(bundle);
+                                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                    fragmentTransaction.replace(R.id.content_user_area, vDiet);
+                                    fragmentTransaction.addToBackStack(null);
+                                    fragmentTransaction.commit();
+                                }
+                                else{
+                                    Toast.makeText(getActivity(), "Error, meal was unable to be confirmed.", Toast.LENGTH_LONG).show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+
+                    RecordMealRequest mealRequest = new RecordMealRequest(username, meal, caloriesEntered, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(getContext());
+                    queue.add(mealRequest);
+
                 }
             }
         });

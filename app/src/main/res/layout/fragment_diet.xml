@@ -17,41 +17,46 @@
         android:weightSum="1">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.19"
-            android:layout_width="200dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <TextView
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.19"
+                android:layout_width="200dp">
+
+             <TextView
                 android:text="Breakfast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvBreakfastHeader"
                 android:textSize="30sp" />
 
-            <TextView
+             <TextView
                 android:text="Total Calories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvSubHeader1" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/etBreakfastCalories" />
+                <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:inputType="number"
+                  android:ems="10"
+                  android:id="@+id/tvBreakfastCalories"
+                    android:textSize="36sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="70dp" />
+               <Space
+                  android:layout_width="match_parent"
+                  android:layout_height="70dp" />
 
-            <TextView
-                android:text="Lunch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvLunchHeader"
-                android:textSize="30sp" />
+                 <TextView
+                   android:text="Lunch"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/tvLunchHeader"
+                   android:textSize="30sp" />
 
             <TextView
                 android:text="Total Calories"
@@ -64,7 +69,8 @@
                 android:layout_height="50dp"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/etLunchCalories" />
+                android:id="@+id/tvLunchCalories"
+                android:textSize="36sp" />
 
             <Space
                 android:layout_width="match_parent"
@@ -87,8 +93,9 @@
                 android:layout_width="match_parent"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/etDinnerCalories"
-                android:layout_height="50dp" />
+                android:id="@+id/tvDinnerCalories"
+                android:layout_height="50dp"
+                android:textSize="36sp" />
 
             <Space
                 android:layout_width="match_parent"
@@ -112,11 +119,19 @@
                 android:layout_height="50dp"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/textView12" />
+                android:id="@+id/tvSnackCalories"
+                android:textSize="36sp" />
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="70dp" />
+
+                <Button
+                    android:text="Back to Diet Menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bBackToDiet"/>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -146,5 +161,6 @@
                 android:id="@+id/ivSnacks" />
 
         </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

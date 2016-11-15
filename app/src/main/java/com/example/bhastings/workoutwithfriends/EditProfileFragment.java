@@ -27,7 +27,7 @@ import org.json.JSONObject;
  */
 public class EditProfileFragment extends Fragment {
 
-    Bundle bundle = this.getArguments();
+    Bundle bundle = new Bundle();
     String username;
     String firstname, lastname, age, weight, height, bio;
     EditText etFirstName, etLastName, etAge, etWeight, etHeight, etBio;
@@ -41,7 +41,8 @@ public class EditProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        username = getArguments().getString("username");
+        username = this.getArguments().getString("username");
+        bundle.putString("username", username);
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_edit_profile, container, false);
@@ -108,7 +109,6 @@ public class EditProfileFragment extends Fragment {
                     queue.add(editProfileRequest);
 
                     Fragment vProfile = new ProfileFragment();
-                    bundle.putString(username, "usernameEdit");
                     vProfile.setArguments(bundle);
 
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
