@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,10 +26,14 @@
             android:textSize="30sp" />
 
         <ImageView
-            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/ivNewWorkoutImage" />
+            android:layout_height="115dp"
+            app:srcCompat="@drawable/demo_workout_image"
+            android:id="@+id/imageView3" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:text="Edit Workout"
@@ -37,8 +42,12 @@
             android:id="@+id/tvEditWorkout"
             android:textAlignment="center" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <TextView
-            android:text="Created by: User"
+            android:text="Created by: WorkoutWithFriends"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvOwner"
@@ -47,18 +56,6 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/etWorkoutName"
-            android:hint="Name" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
 
         <TextView
             android:text="Exercise 1:"
@@ -156,6 +153,12 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="25dp" />
+
+        <Button
+            android:text="Back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bWorkoutViewBack" />
 
 
     </LinearLayout>

@@ -161,6 +161,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/bSave" />
 
+        <Button
+            android:text="Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bCancelEditWorkout" />
+
 
     </LinearLayout>
 </ScrollView>

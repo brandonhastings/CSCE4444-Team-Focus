@@ -45,6 +45,19 @@ public class NewWorkoutFragment extends Fragment {
             }
         });
 
+        Button bCancel = (Button) view.findViewById(R.id.bNewWorkoutCancel);
+        bCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment vActivitiesScreen2 = new ActivitiesFragment();
+                vActivitiesScreen2.setArguments(bundle);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_user_area, vActivitiesScreen2);
+                fragmentTransaction.commit();
+            }
+        });
+
         return view;
     }
 

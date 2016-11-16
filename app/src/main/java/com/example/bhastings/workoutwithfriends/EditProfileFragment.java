@@ -54,6 +54,21 @@ public class EditProfileFragment extends Fragment {
         etHeight = (EditText) view.findViewById(R.id.etHeight);
         etBio = (EditText) view.findViewById(R.id.etBio);
 
+        Button bCancel = (Button) view.findViewById(R.id.bCancelEditProfile);
+        bCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment vProfile = new ProfileFragment();
+                vProfile.setArguments(bundle);
+
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_user_area, vProfile);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
         Button bSave = (Button) view.findViewById(R.id.bSave);
         bSave.setOnClickListener(new View.OnClickListener() {
             @Override

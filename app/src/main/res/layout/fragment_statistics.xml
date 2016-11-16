@@ -1,7 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.bhastings.workoutwithfriends.StatisticsFragment"
     android:background="@android:color/background_light"
     android:backgroundTintMode="screen">
@@ -24,15 +25,18 @@
             android:text="Your statistics are where you can see your progress and finess milestones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3" />
+            android:id="@+id/textView3"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            app:srcCompat="@drawable/stats_image"
+            android:id="@+id/imageView2" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -53,7 +57,12 @@
                 android:layout_height="match_parent"
                 android:id="@+id/bWorkoutStats"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
     </LinearLayout>
-</FrameLayout>
+</ScrollView>

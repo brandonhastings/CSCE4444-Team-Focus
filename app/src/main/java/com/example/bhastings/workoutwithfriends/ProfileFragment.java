@@ -72,7 +72,12 @@ public class ProfileFragment extends Fragment {
                         height = jsonResponse.getString("height");
                         bio = jsonResponse.getString("bio");
 
-                        tvName.setText(firstname + " " + lastname);
+                        if(firstname.equals(null)){
+                            if(lastname.equals(null)){
+
+                            }
+                        }
+                        else tvName.setText(firstname + " " + lastname);
 
                         if(age.equals(null)) {
 

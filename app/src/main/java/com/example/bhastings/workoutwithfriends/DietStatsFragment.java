@@ -82,9 +82,26 @@ public class DietStatsFragment extends Fragment {
                         breakfast = Integer.parseInt(breakfastTotal);
                         lunch = Integer.parseInt(lunchTotal);
                         dinner = Integer.parseInt(dinnerTotal);
-
+                        int totalMeals = 4;
                         totalCalories = snack + breakfast + lunch + dinner;
-                        average = (float) totalCalories / 4;
+                        if(snack == 0){
+                            totalMeals = totalMeals - 1;
+                        }
+                        if(breakfast == 0){
+                            totalMeals = totalMeals - 1;
+                        }
+                        if(lunch == 0){
+                            totalMeals = totalMeals - 1;
+                        }
+                        if(dinner == 0){
+                            totalMeals = totalMeals - 1;
+                        }
+
+                        if(totalMeals == 0){
+                            totalMeals = 1;
+                        }
+
+                        average = (float) totalCalories / totalMeals;
 
                         averageCalories = String.valueOf(average);
 

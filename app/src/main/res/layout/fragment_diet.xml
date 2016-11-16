@@ -8,9 +8,9 @@
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -24,7 +24,7 @@
                 android:orientation="vertical"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.19"
-                android:layout_width="200dp">
+                android:layout_width="50dp">
 
              <TextView
                 android:text="Breakfast"
@@ -51,7 +51,7 @@
                   android:layout_width="match_parent"
                   android:layout_height="70dp" />
 
-                 <TextView
+                <TextView
                    android:text="Lunch"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                 android:layout_height="50dp"
                 android:textSize="36sp" />
 
-            <Space
+                <Space
                 android:layout_width="match_parent"
                 android:layout_height="70dp" />
 
@@ -126,41 +126,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp" />
 
-                <Button
-                    android:text="Back to Diet Menu"
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.19">
+
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bBackToDiet"/>
+                    android:layout_height="172dp"
+                    android:id="@+id/ivBreakfast"
+                    android:src="@drawable/breakfast"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp"
+                    android:id="@+id/ivLunch"
+                    android:src="@drawable/lunch"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="172dp"
+                    android:id="@+id/ivDinner"
+                    android:src="@drawable/dinner"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp"
+                    android:id="@+id/ivSnacks"
+                    android:src="@drawable/snacks"/>
+
             </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="185dp"
-                android:layout_height="172dp"
-                android:id="@+id/ivBreakfast" />
-
-            <ImageView
-                android:layout_width="185dp"
-                android:layout_height="172dp"
-                android:id="@+id/ivLunch" />
-
-            <ImageView
-                android:layout_width="185dp"
-                android:layout_height="172dp"
-                android:id="@+id/ivDinner" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="172dp"
-                android:id="@+id/ivSnacks" />
-
-        </LinearLayout>
+        <Button
+            android:text="Back to Diet Menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bBackToDiet"
+            android:layout_weight="1" />
 
     </LinearLayout>
 </ScrollView>
