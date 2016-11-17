@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class ProfileRequest extends StringRequest {
-    private static final String PROFILE_REQUEST_URL = "http://192.168.43.72/workoutwfriends/ViewProfile.php";
+    private static final String PROFILE_REQUEST_URL = "http://172.27.35.133/workoutwfriends/ViewProfile.php";
     private Map<String, String> params;
 
     public ProfileRequest(String username, Response.Listener listener){

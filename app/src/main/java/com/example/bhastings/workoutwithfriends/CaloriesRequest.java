@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class CaloriesRequest extends StringRequest {
-    private static final String CALORIES_REQUEST_URL = "http://192.168.43.72/workoutwfriends/Calories.php";
+    private static final String CALORIES_REQUEST_URL = "http://172.27.35.133/workoutwfriends/Calories.php";
     private Map<String, String> params;
 
     public CaloriesRequest(String breakfastCalories, String lunchCalories, String dinnerCalories, String snackCalories, Response.Listener<String> listener){

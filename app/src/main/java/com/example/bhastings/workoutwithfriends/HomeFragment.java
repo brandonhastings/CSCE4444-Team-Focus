@@ -27,8 +27,9 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
        username = this.getArguments().getString("username");
-        bundle.putString("username", username);
+       bundle.putString("username", username);
 
 
 

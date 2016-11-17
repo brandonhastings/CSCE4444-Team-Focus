@@ -34,6 +34,7 @@
     </string-array>
 
     <string-array name="Exercises">
+        <item name = "None">None</item>
         <item name = "Dancing">Dancing</item>
         <item name = "Gardening">Gardening</item>
         <item name = "GolfClubs">Golf - Carrying clubs</item>

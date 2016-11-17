@@ -46,12 +46,26 @@
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
-        <TextView
-            android:text="Created by: WorkoutWithFriends"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvOwner"
-            android:textSize="12sp" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Created by:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/creator"
+                android:layout_weight="0.05" />
+
+            <TextView
+                android:text="WorkoutWithFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvOwner"
+                android:textSize="12sp"
+                android:layout_weight="1" />
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
@@ -65,7 +79,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:id="@+id/Exercise1"
+            android:id="@+id/tvExercise1"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
@@ -81,7 +95,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:id="@+id/Exercise2"
+            android:id="@+id/tvExercise2"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
@@ -97,7 +111,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:id="@+id/Exercise3"
+            android:id="@+id/tvExercise3"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
@@ -113,7 +127,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:id="@+id/Exercise4"
+            android:id="@+id/tvExercise4"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
@@ -129,7 +143,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:id="@+id/Exercise5"
+            android:id="@+id/tvExercise5"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
@@ -145,7 +159,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:id="@+id/Exercise6"
+            android:id="@+id/tvExercise6"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 

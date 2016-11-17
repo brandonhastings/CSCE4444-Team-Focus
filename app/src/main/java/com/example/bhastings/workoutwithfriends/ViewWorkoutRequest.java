@@ -7,17 +7,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by bhastings on 11/14/2016.
+ * Created by bhastings on 11/16/2016.
  */
 
-public class DietStatsRequest extends StringRequest {
-    private static final String DIET_STATS_REQUEST = "http://172.27.35.133/workoutwfriends/DietStats.php";
+public class ViewWorkoutRequest extends StringRequest {
+    private static  final String VIEW_WORKOUT_REQEUST_URL = "http://172.27.35.133/workoutwfriends/ViewWorkout.php";
     private Map<String, String> params;
 
-    public DietStatsRequest(String username, Response.Listener<String> listener){
-        super(Method.POST, DIET_STATS_REQUEST, listener, null);
+    public ViewWorkoutRequest(String username, String name, Response.Listener listener){
+        super (Method.POST, VIEW_WORKOUT_REQEUST_URL, listener, null);
         params = new HashMap<>();
         params.put("username", username);
+        params.put("name", name);
     }
 
     @Override
