@@ -1,6 +1,5 @@
 package com.example.bhastings.workoutwithfriends;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +13,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.RegisterRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;

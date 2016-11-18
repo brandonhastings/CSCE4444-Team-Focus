@@ -1,4 +1,4 @@
-package com.example.bhastings.workoutwithfriends;
+package com.example.bhastings.workoutwithfriends.DatabaseRequests;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class EditProfileRequest extends StringRequest {
 
-    private static final String EDIT_PROFILE_REQUEST_URL = "http://172.27.35.133/workoutwfriends/EditProfile.php";
+    private static final String EDIT_PROFILE_REQUEST_URL = "http://10.10.10.99/workoutwfriends/EditProfile.php";
     private Map<String, String> params;
 
     public EditProfileRequest(String username, String firstname, String lastname, String age, String weight, String height, String bio,  Response.Listener listener){

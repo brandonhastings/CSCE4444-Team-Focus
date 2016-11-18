@@ -1,4 +1,4 @@
-package com.example.bhastings.workoutwithfriends;
+package com.example.bhastings.workoutwithfriends.DatabaseRequests;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class ProfileRequest extends StringRequest {
-    private static final String PROFILE_REQUEST_URL = "http://172.27.35.133/workoutwfriends/ViewProfile.php";
+    private static final String PROFILE_REQUEST_URL = "http://10.10.10.99/workoutwfriends/ViewProfile.php";
     private Map<String, String> params;
 
     public ProfileRequest(String username, Response.Listener listener){

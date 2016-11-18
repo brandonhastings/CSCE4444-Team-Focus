@@ -5,12 +5,23 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.EditWorkoutRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 
@@ -19,8 +30,10 @@ import org.w3c.dom.Text;
  */
 public class EditWorkoutFragment extends Fragment {
 
-    String username;
+    String username, oldname;
     Bundle bundle = new Bundle();
+
+    String name, exercise1, exercise2, exercise3, exercise4, exercise5, exercise6;
 
 
     public EditWorkoutFragment() {
@@ -31,11 +44,21 @@ public class EditWorkoutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        username = getArguments().getString("username");
+        username = this.getArguments().getString("username");
+        oldname = this.getArguments().getString("name");
         bundle.putString("username", username);
+
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_edit_workout, container, false);
+
+        final Spinner sExercise1 = (Spinner) view.findViewById(R.id.sEditExercise1);
+        final Spinner sExercise2 = (Spinner) view.findViewById(R.id.sEditExercise2);
+        final Spinner sExercise3 = (Spinner) view.findViewById(R.id.sEditExercise3);
+        final Spinner sExercise4 = (Spinner) view.findViewById(R.id.sEditExercise4);
+        final Spinner sExercise5 = (Spinner) view.findViewById(R.id.sEditExercise5);
+        final Spinner sExercise6 = (Spinner) view.findViewById(R.id.sEditExercise6);
+        final EditText etWorkoutName = (EditText) view.findViewById(R.id.etEditWorkoutName);
 
         Button bCancel = (Button) view.findViewById(R.id.bCancelEditWorkout);
         bCancel.setOnClickListener(new View.OnClickListener() {
@@ -56,13 +79,58 @@ public class EditWorkoutFragment extends Fragment {
         bSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment vWorkout = new WorkoutViewFragment();
-                vWorkout.setArguments(bundle);
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_user_area, vWorkout);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+
+                name = etWorkoutName.getText().toString();
+                exercise1 = sExercise1.getSelectedItem().toString();
+                exercise2 = sExercise2.getSelectedItem().toString();
+                exercise3 = sExercise3.getSelectedItem().toString();
+                exercise4 = sExercise4.getSelectedItem().toString();
+                exercise5 = sExercise5.getSelectedItem().toString();
+                exercise6 = sExercise6.getSelectedItem().toString();
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        JSONObject jsonResponse = null;
+                        try {
+                            jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+
+                            if(success) {
+
+                                if (name.isEmpty()) {
+                                    Toast.makeText(getActivity(), "Name can not be blank", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(getActivity(), "Workout has been updated.", Toast.LENGTH_LONG).show();
+
+                                    Fragment vWorkout = new WorkoutViewFragment();
+                                    bundle.putString("name", name);
+                                    vWorkout.setArguments(bundle);
+                                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                    fragmentTransaction.replace(R.id.content_user_area, vWorkout);
+                                    fragmentTransaction.addToBackStack(null);
+                                    fragmentTransaction.commit();
+
+                                }
+                            }
+                            else{
+                                    Toast.makeText(getActivity(), "Error: Workout was not updated, please try again.", Toast.LENGTH_LONG).show();
+                            }
+
+                        } catch (JSONException e) {
+                            Log.e("log_tag", "Error converting result " + e.toString());
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                };
+
+                EditWorkoutRequest editWorkoutRequest = new EditWorkoutRequest(username, oldname, name, exercise1, exercise2, exercise3, exercise4, exercise5, exercise6, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(getContext());
+                queue.add(editWorkoutRequest);
+
             }
         });
 

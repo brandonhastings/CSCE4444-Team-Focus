@@ -1,4 +1,4 @@
-package com.example.bhastings.workoutwithfriends;
+package com.example.bhastings.workoutwithfriends.DatabaseRequests;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class RegisterRequest extends StringRequest{
 
-    private static final String REGISTER_REQUEST_URL = "http://172.27.35.133/workoutwfriends/Register.php";
+    private static final String REGISTER_REQUEST_URL = "http://10.10.10.99/workoutwfriends/Register.php";
     private Map<String, String> params;
 
     public RegisterRequest(String username, String password, String firstname, String lastname, Response.Listener<String> listener){

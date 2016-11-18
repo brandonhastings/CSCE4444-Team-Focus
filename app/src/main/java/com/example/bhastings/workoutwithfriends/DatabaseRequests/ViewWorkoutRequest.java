@@ -1,4 +1,4 @@
-package com.example.bhastings.workoutwithfriends;
+package com.example.bhastings.workoutwithfriends.DatabaseRequests;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class ViewWorkoutRequest extends StringRequest {
-    private static  final String VIEW_WORKOUT_REQEUST_URL = "http://172.27.35.133/workoutwfriends/ViewWorkout.php";
+    private static  final String VIEW_WORKOUT_REQEUST_URL = "http://10.10.10.99/workoutwfriends/WorkoutView.php";
     private Map<String, String> params;
 
     public ViewWorkoutRequest(String username, String name, Response.Listener listener){

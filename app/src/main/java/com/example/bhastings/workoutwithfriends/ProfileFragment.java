@@ -1,9 +1,7 @@
 package com.example.bhastings.workoutwithfriends;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,17 +9,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ProfileRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 
 /**
@@ -72,32 +68,7 @@ public class ProfileFragment extends Fragment {
                         height = jsonResponse.getString("height");
                         bio = jsonResponse.getString("bio");
 
-                        if(firstname.equals(null)){
-                            if(lastname.equals(null)){
 
-                            }
-                        }
-                        else tvName.setText(firstname + " " + lastname);
-
-                        if(age.equals(null)) {
-
-                        }
-                        else tvAge.setText(age);
-
-                       if(height.equals(null)) {
-
-                        }
-                        else tvHeight.setText(height);
-
-                        if(weight.equals(null)){
-
-                        }
-                        else tvWeight.setText(weight);
-
-                        if(bio.equals(null)){
-
-                        }
-                        else tvBio.setText(bio);
                     }
 
                 } catch (JSONException e) {

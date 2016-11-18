@@ -32,11 +32,16 @@
             android:textSize="18sp"
             android:textAlignment="center" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
         <ImageView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/ivNewWorkoutImage" />
+            android:id="@+id/ivNewWorkoutImage"
+            android:src="@drawable/workouts"/>
 
         <Button
             android:text="New Workout"
@@ -50,27 +55,18 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvWorkoutsHeader" />
 
-        <TextView
-            android:text="Workout 1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvWorkoutTest"
-            android:textSize="18sp" />
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lvWorkouts" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="25dp" />
+            android:id="@+id/lvWorkouts"
+            android:layout_height="323dp" />
 
         <ImageView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/ivNewExerciseImage" />
+            android:id="@+id/ivNewExerciseImage"
+            android:src="@drawable/exercises"/>
 
         <TextView
             android:text="Your Exercises:"

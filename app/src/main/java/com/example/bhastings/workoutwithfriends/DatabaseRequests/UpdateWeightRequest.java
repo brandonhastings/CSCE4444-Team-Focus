@@ -1,4 +1,4 @@
-package com.example.bhastings.workoutwithfriends;
+package com.example.bhastings.workoutwithfriends.DatabaseRequests;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class UpdateWeightRequest extends StringRequest {
-    private static final String UPDATE_WEIGHT_REQUEST = "http://172.27.35.133/workoutwfriends/UpdateWeight.php";
+    private static final String UPDATE_WEIGHT_REQUEST = "http://10.10.10.99/workoutwfriends/UpdateWeight.php";
     private Map<String, String> params;
 
     public UpdateWeightRequest(String username, String weight, Response.Listener <String> listener){
