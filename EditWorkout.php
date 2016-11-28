@@ -23,13 +23,43 @@
 	$exercise4 = $_POST["exercise4"];
 	$exercise5 = $_POST["exercise5"];
 	$exercise6 = $_POST["exercise6"];
+	$time1 = $_POST["time1"];
+	$time2 = $_POST["time2"];
+	$time3 = $_POST["time3"];
+	$time4 = $_POST["time4"];
+	$time5 = $_POST["time5"];
+	$time6 = $_POST["time6"];
+	
+	if($time1 == NULL){
+		$time1 = 0;
+	}
+	
+	if($time2 == NULL){
+		$time2 = 0;
+	}
+	
+	if($time3 == NULL){
+		$time3 = 0;
+	}
+	
+	if($time4 == NULL){
+		$time4 = 0;
+	}
+	
+	if($time5 == NULL){
+		$time5 = 0;
+	}
+	
+	if($time6 == NULL){
+		$time6 = 0;
+	}
 	
 	$creator = $username;
-	
-	
 
-	$stmt = mysqli_prepare($con, "UPDATE custom_workout SET name=?, exercise1=?, exercise2=?, exercise3=?, exercise4=?, exercise5=?, exercise6=?  WHERE creator=? AND name=?");
-	mysqli_stmt_bind_param($stmt, "sssssssss", $newname, $exercise1, $exercise2, $exercise3, $exercise4, $exercise5, $exercise6, $username, $name);
+	$stmt = mysqli_prepare($con, "UPDATE custom_workout SET name=?, exercise1=?, time1=?, exercise2=?, time2=?, exercise3=?, time3=?, exercise4=?, time4=?,
+							exercise5=?, time5=?, exercise6=?, time6=?  WHERE creator=? AND name=?");
+	mysqli_stmt_bind_param($stmt, "sssssssssssssss", $newname, $exercise1, $time1, $exercise2, $time2, $exercise3, $time3, $exercise4, $time4,
+							$exercise5, $time5, $exercise6, $time6, $username, $name);
 	
 	mysqli_stmt_execute($stmt);
 	

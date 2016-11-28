@@ -16,7 +16,8 @@
 	mysqli_stmt_execute($statement);
 	
 	mysqli_stmt_store_result($statement);
-	mysqli_stmt_bind_result($statement, $creator, $name, $exercise1, $exercise2, $exercise3, $exercise4, $exercise5, $exercise6);
+	mysqli_stmt_bind_result($statement, $id, $creator, $name, $exercise1, $time1, $exercise2, $time2, $exercise3, $time3, $exercise4, $time4,
+							$exercise5, $time5, $exercise6, $time6);
 	
 	$response = array();
 	$response["success"] = false;
@@ -32,6 +33,12 @@
 		$response["exercise4"] = $exercise4;
 		$response["exercise5"] = $exercise5;
 		$response["exercise6"] = $exercise6;
+		$response["time1"] = $time1;
+		$response["time2"] = $time2;
+		$response["time3"] = $time3;
+		$response["time4"] = $time4;
+		$response["time5"] = $time5;
+		$response["time6"] = $time6;
 	}
 	
 	echo json_encode($response);
