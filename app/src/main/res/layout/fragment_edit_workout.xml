@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,19 +17,19 @@
 
         />
 
+
+
         ]]>
 
-        <ImageView
-            android:layout_gravity="center"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/ivNewWorkoutImage" />
+            android:layout_height="25dp" />
 
-        <Button
-            android:text="Upload Photo"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bUploadPhoto" />
+            app:srcCompat="@drawable/editworkout"
+            android:id="@+id/imageView5" />
 
         <TextView
             android:text="Workout Information:"
@@ -38,7 +39,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp" />
+            android:layout_height="5dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -70,6 +71,23 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etEditTime1" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 2:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,6 +103,23 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
+
+        <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etEditTime2" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
 
         <TextView
             android:text="Exercise 3:"
@@ -104,6 +139,23 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etEditTime3" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 4:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,6 +171,23 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
+
+        <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etEditTime4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
 
         <TextView
             android:text="Exercise 5:"
@@ -138,6 +207,23 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etEditTime5" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 6:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -150,6 +236,22 @@
             style="@android:style/Widget.Spinner.DropDown"
             android:entries="@array/Exercises" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etEditTime6" />
 
         <Space
             android:layout_width="match_parent"
@@ -159,13 +261,15 @@
             android:text="Save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bSave" />
+            android:id="@+id/bSave"
+            style="@android:style/Widget.Button.Inset" />
 
         <Button
             android:text="Cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bCancelEditWorkout" />
+            android:id="@+id/bCancelEditWorkout"
+            style="@android:style/Widget.Button.Inset" />
 
 
     </LinearLayout>

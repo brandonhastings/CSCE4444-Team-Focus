@@ -101,7 +101,10 @@ public class UserAreaActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            SettingsFragment settings = new SettingsFragment();
+            settings.setArguments(bundle);
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_user_area, settings).commit();
         }
 
         return super.onOptionsItemSelected(item);

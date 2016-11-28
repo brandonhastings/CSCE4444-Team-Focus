@@ -70,7 +70,7 @@ public class ActivitiesFragment extends Fragment {
         bundle.putString("username", username);
         workoutArrayList = new ArrayList<>();
 
-
+        final String page = "Activities";
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_activities, container, false);
@@ -87,6 +87,7 @@ public class ActivitiesFragment extends Fragment {
                 String value = (String) workoutList.getItemAtPosition(itemPosition);
 
                 bundle.putString("name", value);
+                bundle.putString("page", page);
                 Fragment vWorkout = new WorkoutViewFragment();
                 vWorkout.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
@@ -128,18 +129,6 @@ public class ActivitiesFragment extends Fragment {
             }
         });
 
-        Button bNewExercise = (Button) view.findViewById(R.id.bViewExerciseDetails);
-        bNewExercise.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment vExerciseView = new ExerciseViewFragment();
-                vExerciseView.setArguments(bundle);
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_user_area, vExerciseView);
-                fragmentTransaction.commit();
-            }
-        });
 
         return view;
     }

@@ -60,7 +60,8 @@
         android:id="@+id/bLogin"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="userLogin"/>
+        android:onClick="userLogin"
+        style="@android:style/Widget.Button.Inset" />
 
     <TextView
         android:text="Register Here"
@@ -71,5 +72,17 @@
         android:id="@+id/tvRegister"
         android:onClick="registerHere"
         android:textAlignment="center" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <TextView
+        android:text="Exercise and calorie information for calculations are referenced from BodyBuilding.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView43"
+        android:textAlignment="center"
+        android:textSize="10sp" />
 
 </LinearLayout>

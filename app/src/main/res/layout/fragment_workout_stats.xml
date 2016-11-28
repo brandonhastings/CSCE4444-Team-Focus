@@ -32,34 +32,38 @@
             android:layout_height="15dp" />
 
         <TextView
-            android:text="Longest Run (miles)"
+            android:text="Best Distance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8" />
+            android:id="@+id/textView8"
+            android:textColor="@android:color/background_dark" />
 
         <TextView
-            android:text="5"
+            android:text="Loading..."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9"
-            android:textSize="24sp" />
+            android:id="@+id/tvBestDistance"
+            android:textSize="24sp"
+            android:textColor="@android:color/background_dark"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
         <TextView
-            android:text="Longest Run (hours)"
+            android:text="Best Time:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView13" />
+            android:id="@+id/textView13"
+            android:textColor="@android:color/background_dark"/>
 
         <TextView
-            android:text="1.5"
+            android:text="Loading..."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView14"
-            android:textSize="24sp" />
+            android:id="@+id/tvBestTime"
+            android:textSize="24sp"
+            android:textColor="@android:color/background_dark"/>
 
         <Space
             android:layout_width="match_parent"
@@ -69,14 +73,16 @@
             android:text="Most Common Workout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView15" />
+            android:id="@+id/textView15"
+            android:textColor="@android:color/background_dark"/>
 
         <TextView
-            android:text="Default 1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView16"
-            android:textSize="24sp" />
+            android:id="@+id/tvMostCommonWorkout"
+            android:textSize="24sp"
+            android:text="Loading..."
+            android:textColor="@android:color/background_dark"/>
 
         <Space
             android:layout_width="match_parent"
@@ -86,6 +92,7 @@
             android:text="Back to Stats Menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bBackToStatsMenu" />
+            android:id="@+id/bBackToStatsMenu"
+            style="@android:style/Widget.Button.Inset" />
     </LinearLayout>
 </ScrollView>

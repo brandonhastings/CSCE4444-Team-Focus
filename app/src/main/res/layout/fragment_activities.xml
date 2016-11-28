@@ -24,6 +24,10 @@
             android:textAlignment="center"
             android:textSize="30sp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <TextView
             android:text="Create your own workout or add exercises for your workouts!"
             android:layout_width="match_parent"
@@ -38,16 +42,26 @@
 
         <ImageView
             android:layout_gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="279dp"
             android:layout_height="100dp"
             android:id="@+id/ivNewWorkoutImage"
             android:src="@drawable/workouts"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <Button
             android:text="New Workout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bNewWorkout" />
+            android:id="@+id/bNewWorkout"
+            style="@android:style/Widget.Button.Inset"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:text="Your Workouts:"
@@ -60,32 +74,6 @@
             android:layout_width="match_parent"
             android:id="@+id/lvWorkouts"
             android:layout_height="323dp" />
-
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/ivNewExerciseImage"
-            android:src="@drawable/exercises"/>
-
-        <TextView
-            android:text="Your Exercises:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvExerciseListHeader" />
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:id="@+id/Exercise1"
-            android:layout_height="wrap_content"
-            android:entries="@array/Exercises"
-            style="@android:style/Widget.Spinner.DropDown" />
-
-        <Button
-            android:text="View Exercise Details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bViewExerciseDetails" />
 
 
     </LinearLayout>

@@ -30,10 +30,11 @@ import org.w3c.dom.Text;
  */
 public class EditWorkoutFragment extends Fragment {
 
-    String username, oldname;
+    String username, oldname, page;
     Bundle bundle = new Bundle();
 
-    String name, exercise1, exercise2, exercise3, exercise4, exercise5, exercise6;
+    String name, exercise1, exercise2, exercise3, exercise4, exercise5, exercise6,
+            time1, time2, time3, time4, time5, time6;
 
 
     public EditWorkoutFragment() {
@@ -46,6 +47,7 @@ public class EditWorkoutFragment extends Fragment {
                              Bundle savedInstanceState) {
         username = this.getArguments().getString("username");
         oldname = this.getArguments().getString("name");
+        page = this.getArguments().getString("page");
         bundle.putString("username", username);
 
 
@@ -58,13 +60,23 @@ public class EditWorkoutFragment extends Fragment {
         final Spinner sExercise4 = (Spinner) view.findViewById(R.id.sEditExercise4);
         final Spinner sExercise5 = (Spinner) view.findViewById(R.id.sEditExercise5);
         final Spinner sExercise6 = (Spinner) view.findViewById(R.id.sEditExercise6);
+
         final EditText etWorkoutName = (EditText) view.findViewById(R.id.etEditWorkoutName);
+
+        final EditText etTime1 = (EditText) view.findViewById(R.id.etEditTime1);
+        final EditText etTime2 = (EditText) view.findViewById(R.id.etEditTime2);
+        final EditText etTime3 = (EditText) view.findViewById(R.id.etEditTime3);
+        final EditText etTime4 = (EditText) view.findViewById(R.id.etEditTime4);
+        final EditText etTime5 = (EditText) view.findViewById(R.id.etEditTime5);
+        final EditText etTime6 = (EditText) view.findViewById(R.id.etEditTime6);
 
         Button bCancel = (Button) view.findViewById(R.id.bCancelEditWorkout);
         bCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Fragment vWorkout = new WorkoutViewFragment();
+                bundle.putString("page", page);
+                bundle.putString("name", oldname);
                 vWorkout.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -87,6 +99,13 @@ public class EditWorkoutFragment extends Fragment {
                 exercise4 = sExercise4.getSelectedItem().toString();
                 exercise5 = sExercise5.getSelectedItem().toString();
                 exercise6 = sExercise6.getSelectedItem().toString();
+
+                time1 = etTime1.getText().toString();
+                time2 = etTime2.getText().toString();
+                time3 = etTime3.getText().toString();
+                time4 = etTime4.getText().toString();
+                time5 = etTime5.getText().toString();
+                time6 = etTime6.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -127,7 +146,8 @@ public class EditWorkoutFragment extends Fragment {
                     }
                 };
 
-                EditWorkoutRequest editWorkoutRequest = new EditWorkoutRequest(username, oldname, name, exercise1, exercise2, exercise3, exercise4, exercise5, exercise6, responseListener);
+                EditWorkoutRequest editWorkoutRequest = new EditWorkoutRequest(username, oldname, name, exercise1, exercise2, exercise3, exercise4, exercise5, exercise6,
+                        time1, time2, time3, time4, time5, time6, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(getContext());
                 queue.add(editWorkoutRequest);
 

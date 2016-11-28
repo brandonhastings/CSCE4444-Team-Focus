@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +16,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="125dp"
-        android:id="@+id/ivImageHeader" />
+        android:id="@+id/ivImageHeader"
+        app:srcCompat="@drawable/weight" />
 
     <Space
         android:layout_width="match_parent"
@@ -24,10 +26,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter your current weight"
         android:id="@+id/tvMessage"
         android:textSize="30sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:background="@drawable/currentweight" />
 
     <Space
         android:layout_width="match_parent"
@@ -48,6 +50,7 @@
         android:text="Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bSubmitWeight" />
+        android:id="@+id/bSubmitWeight"
+        style="@android:style/Widget.Button.Inset" />
 
 </LinearLayout>

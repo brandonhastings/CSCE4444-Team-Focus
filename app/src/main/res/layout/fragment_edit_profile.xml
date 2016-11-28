@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,18 +15,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
-            android:id="@+id/ivProfilePic" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
 
-        <Button
-            android:text="Upload Photo"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bUploadPic"
-            android:layout_gravity="center" />
+            app:srcCompat="@drawable/editprofile"
+            android:id="@+id/imageView4" />
 
         <EditText
             android:layout_gravity="left"
@@ -79,13 +77,15 @@
             android:text="Save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bSave" />
+            android:id="@+id/bSave"
+            style="@android:style/Widget.Button.Inset" />
 
         <Button
             android:text="Cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bCancelEditProfile" />
+            android:id="@+id/bCancelEditProfile"
+            style="@android:style/Widget.Button.Inset" />
 
 
     </LinearLayout>

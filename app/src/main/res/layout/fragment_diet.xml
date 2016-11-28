@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bhastings.workoutwithfriends.DietFragment"
-    android:background="@android:color/background_light">
+    tools:context="com.example.bhastings.workoutwithfriends.DietFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -31,13 +30,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvBreakfastHeader"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                  />
 
              <TextView
                 android:text="Total Calories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvSubHeader1" />
+                android:id="@+id/tvSubHeader1"
+                 />
 
                 <TextView
                   android:layout_width="match_parent"
@@ -167,7 +168,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/bBackToDiet"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            style="@android:style/Widget.Button.Inset" />
 
     </LinearLayout>
 </ScrollView>

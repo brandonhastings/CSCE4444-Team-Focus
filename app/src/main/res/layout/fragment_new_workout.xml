@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,34 +18,45 @@
         />
 
         <TextView
-            android:text="New Workout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvHeader1"
             android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:background="@drawable/workoutcreator" />
 
         <ImageView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:id="@+id/ivNewWorkoutImage" />
-
-        <Button
-            android:text="Upload Photo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bUploadWorkoutPhoto" />
-
-        <TextView
-            android:text="Workout Information:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvWorkoutInfo" />
+            android:id="@+id/ivNewWorkoutImage"
+            app:srcCompat="@drawable/newworkouts" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp" />
+            android:layout_height="10dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/underline"
+            android:id="@+id/imageView9" />
+
+        <TextView
+            android:text="Workout Information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWorkoutInfo"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="normal|bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/underline"
+            android:id="@+id/imageView8" />
 
         <EditText
             android:layout_width="match_parent"
@@ -76,10 +88,31 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNewTime1" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 2:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView18" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -93,10 +126,31 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNewTime2" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 3:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView19" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -110,10 +164,31 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNewTime3" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 4:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView20" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -127,10 +202,31 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNewTime4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 5:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView21" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -144,10 +240,31 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNewTime5" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
             android:text="Exercise 6:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView22" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -156,6 +273,22 @@
             style="@android:style/Widget.Spinner.DropDown"
             android:entries="@array/Exercises" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Time (minutes)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNewTime6" />
 
         <Space
             android:layout_width="match_parent"
@@ -165,13 +298,15 @@
             android:text="Save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bSaveNewWorkout" />
+            android:id="@+id/bSaveNewWorkout"
+            style="@android:style/Widget.Button.Inset" />
 
         <Button
             android:text="Cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bNewWorkoutCancel" />
+            android:id="@+id/bNewWorkoutCancel"
+            style="@android:style/Widget.Button.Inset" />
 
 
     </LinearLayout>

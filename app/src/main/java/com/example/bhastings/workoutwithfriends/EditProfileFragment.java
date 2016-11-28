@@ -1,7 +1,11 @@
 package com.example.bhastings.workoutwithfriends;
 
 
+import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -27,10 +32,12 @@ import org.json.JSONObject;
  */
 public class EditProfileFragment extends Fragment {
 
+
     Bundle bundle = new Bundle();
     String username;
     String firstname, lastname, age, weight, height, bio;
     EditText etFirstName, etLastName, etAge, etWeight, etHeight, etBio;
+    ImageView imageToUpload;
 
     public EditProfileFragment() {
         // Required empty public constructor
@@ -54,6 +61,8 @@ public class EditProfileFragment extends Fragment {
         etHeight = (EditText) view.findViewById(R.id.etHeight);
         etBio = (EditText) view.findViewById(R.id.etBio);
 
+
+
         Button bCancel = (Button) view.findViewById(R.id.bCancelEditProfile);
         bCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +77,7 @@ public class EditProfileFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
 
         Button bSave = (Button) view.findViewById(R.id.bSave);
         bSave.setOnClickListener(new View.OnClickListener() {
@@ -139,5 +149,6 @@ public class EditProfileFragment extends Fragment {
 
         return view;
     }
+
 
 }

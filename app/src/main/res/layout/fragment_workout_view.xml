@@ -23,24 +23,44 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvWorkoutName"
             android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="115dp"
-            app:srcCompat="@drawable/demo_workout_image"
+            app:srcCompat="@drawable/silhouette_pushup"
             android:id="@+id/imageView3" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
-        <TextView
-            android:text="Edit Workout"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvEditWorkout"
-            android:textAlignment="center" />
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bEditWorkout"
+                android:layout_weight="1"
+                style="@android:style/Widget.Button.Inset" />
+
+            <Button
+                android:text="Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bDeleteWorkout"
+                android:layout_weight="1"
+                style="@android:style/Widget.Button.Inset" />
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
@@ -59,11 +79,11 @@
                 android:layout_weight="0.05" />
 
             <TextView
-                android:text="WorkoutWithFriends"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvOwner"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:layout_weight="1" />
         </LinearLayout>
 
@@ -88,6 +108,22 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time 1:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView23" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvViewTime1"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
             android:text="Exercise 2:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,6 +132,22 @@
         <TextView
             android:layout_width="match_parent"
             android:id="@+id/tvViewExercise2"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Time 2:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvViewTime2"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
@@ -120,6 +172,22 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time 3:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView25" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvViewTime3"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
             android:text="Exercise 4:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -128,6 +196,22 @@
         <TextView
             android:layout_width="match_parent"
             android:id="@+id/tvViewExercise4"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Time 4:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView26" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvViewTime4"
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
@@ -152,6 +236,22 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:text="Time 5:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView27" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvViewTime5"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
             android:text="Exercise 6:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -163,16 +263,32 @@
             android:layout_height="wrap_content"
             android:textSize="24sp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:text="Time 6:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView29" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvViewTime6"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="25dp" />
+            android:layout_height="10dp" />
 
         <Button
             android:text="Back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bWorkoutViewBack" />
+            android:id="@+id/bWorkoutViewBack"
+            style="@android:style/Widget.Button.Inset" />
 
 
     </LinearLayout>

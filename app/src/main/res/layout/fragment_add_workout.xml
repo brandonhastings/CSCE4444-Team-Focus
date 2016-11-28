@@ -4,7 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.bhastings.workoutwithfriends.AddWorkoutFragment"
-    android:background="@android:color/background_light">
+    style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:clipToPadding="true">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -14,22 +17,38 @@
     android:layout_gravity="center_horizontal"    >
 
 
-    <Space
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <ImageView
         android:layout_width="match_parent"
-        android:layout_height="75dp" />
-    <TextView
+        android:layout_height="75dp"
+        android:background="@drawable/trackworkout" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
         android:text="What workout did you do?"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tvMessage"
-        android:textSize="30sp"
+        android:textSize="18sp"
         android:textAlignment="center" />
 
-    <Spinner
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        style="@android:style/Widget.Spinner.DropDown" />
+        android:id="@+id/sAddWorkoutList"
+        style="@android:style/Widget.Spinner.DropDown"
+
+        />
 
     <Space
         android:layout_width="match_parent"
@@ -39,11 +58,17 @@
         android:text="Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bSubmit" />
+        android:id="@+id/bSubmit"
+        style="@android:style/Widget.Button.Inset" />
 
-    <Space
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <ImageView
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="264dp"
+        android:background="@drawable/runner" />
 
     <TextView
         android:text="Go for a Run!"
@@ -61,6 +86,7 @@
         android:text="GO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2" />
+        android:id="@+id/button2"
+        style="@android:style/Widget.Button.Inset" />
     </LinearLayout>
 </ScrollView>
