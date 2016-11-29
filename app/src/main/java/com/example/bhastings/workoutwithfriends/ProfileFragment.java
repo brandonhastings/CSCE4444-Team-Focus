@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -56,6 +57,8 @@ public class ProfileFragment extends Fragment {
 
     ListView workoutList;
 
+    ImageView profilePic;
+
     public ProfileFragment() {
         // Required empty public constructor
 
@@ -70,6 +73,17 @@ public class ProfileFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        profilePic = (ImageView) view.findViewById(R.id.ivProfilePic);
+
+        profilePic.setImageResource(R.drawable.no_pic);
+
+        if(username.equals("cjacobs")){
+            profilePic.setImageResource(R.drawable.chase);
+        }
+        else if (username.equals("bhastings")){
+            profilePic.setImageResource(R.drawable.brandon);
+        }
 
         workoutList = (ListView) view.findViewById(R.id.lvProfileWorkouts);
         new BackgroundTasks().execute();

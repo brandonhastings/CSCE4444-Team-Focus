@@ -156,6 +156,39 @@
 
         <Space
             android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:text="Statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView44" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Diet Stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bFriendDietStats"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Workout Stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bViewFriendWorkoutStats"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
             android:layout_height="5dp" />
     </LinearLayout>
 

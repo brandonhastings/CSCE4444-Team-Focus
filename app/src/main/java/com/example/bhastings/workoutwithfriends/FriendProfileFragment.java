@@ -101,7 +101,7 @@ public class FriendProfileFragment  extends Fragment {
                 String page = "ViewFriendProfile";
                 bundle.putString("name", value);
                 bundle.putString("page", page);
-                android.support.v4.app.Fragment vWorkout = new WorkoutViewFragment();
+                android.support.v4.app.Fragment vWorkout = new FriendWorkoutFragment();
                 vWorkout.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -167,6 +167,34 @@ public class FriendProfileFragment  extends Fragment {
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
+            }
+        });
+
+        Button bFriendWorkoutStats = (Button) view.findViewById(R.id.bViewFriendWorkoutStats);
+        bFriendWorkoutStats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment vWorkoutStats = new FriendWorkoutStatsFragment();
+                vWorkoutStats.setArguments(bundle);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_user_area, vWorkoutStats);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        Button bFriendDietStats = (Button) view.findViewById(R.id.bFriendDietStats);
+        bFriendDietStats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment vDietStats = new FriendDietStatsFragment();
+                vDietStats.setArguments(bundle);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_user_area, vDietStats);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

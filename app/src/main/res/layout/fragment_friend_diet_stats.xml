@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bhastings.workoutwithfriends.DietStatsFragment"
-    android:background="@android:color/background_light">
+    tools:context="com.example.bhastings.workoutwithfriends.FriendDietStatsFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -29,7 +28,7 @@
             android:layout_height="5dp" />
 
         <TextView
-            android:text="Here are your stats for today:"
+            android:text="Here are your diet stats for today"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvMessage"
@@ -49,7 +48,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvAverageIntakeValue"/>
+            android:id="@+id/tvFriendAverageIntakeValue"/>
 
         <Space
             android:layout_width="match_parent"
@@ -60,10 +59,10 @@
             android:layout_height="20dp" />
 
         <Button
-            android:text="Back to Stats Menu"
+            android:text="Back to Profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bBackToStatsDiet"
+            android:id="@+id/bBackToFriendProfile"
             style="@android:style/Widget.Button.Inset" />
     </LinearLayout>
 
