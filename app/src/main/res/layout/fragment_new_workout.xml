@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -18,12 +18,14 @@
         />
 
         <TextView
+            android:text="Workout Creator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvHeader1"
             android:textAlignment="center"
-            android:textSize="30sp"
-            android:background="@drawable/workoutcreator" />
+            android:textSize="38sp"
+            android:textColor="@color/colorAccent1"
+            android:textStyle="bold"/>
 
         <ImageView
             android:layout_gravity="center"
@@ -64,7 +66,8 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/etWorkoutName"
-            android:hint="Name" />
+            android:hint="Name"
+            android:textColorHint="@color/colorAccent5"/>
 
         <Space
             android:layout_width="match_parent"

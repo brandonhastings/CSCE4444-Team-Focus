@@ -5,7 +5,7 @@ package com.example.bhastings.workoutwithfriends;
  */
 
 public class User {
-
+    
     String username, firstName, lastName, password, photoLink;
     Integer weight, goalWeight, height, age;
 

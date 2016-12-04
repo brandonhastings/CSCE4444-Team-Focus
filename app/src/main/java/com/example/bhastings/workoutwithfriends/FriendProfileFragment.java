@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.bhastings.workoutwithfriends.DatabaseRequests.ProfileRequest;
 import com.example.bhastings.workoutwithfriends.DatabaseRequests.RemoveFriendRequest;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ServerConstants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -82,10 +83,10 @@ public class FriendProfileFragment  extends Fragment {
 
         ivProfilePicture = (ImageView) view.findViewById(R.id.ivProfilePic);
 
-        if(user.equals("cjacobs")){
+        if(username.equals("cjacobs")){
             ivProfilePicture.setImageResource(R.drawable.chase);
         }
-        else if(user.equals("bhastings")){
+        else if(username.equals("bhastings")){
             ivProfilePicture.setImageResource(R.drawable.brandon);
         }
 
@@ -99,6 +100,8 @@ public class FriendProfileFragment  extends Fragment {
 
                 String value = (String) workoutList.getItemAtPosition(itemPosition);
                 String page = "ViewFriendProfile";
+                bundle.putString("homeuser", homeuser);
+                bundle.putString("friend", username);
                 bundle.putString("name", value);
                 bundle.putString("page", page);
                 android.support.v4.app.Fragment vWorkout = new FriendWorkoutFragment();
@@ -249,7 +252,7 @@ public class FriendProfileFragment  extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            JSON_URL = "http://10.10.10.99/workoutwfriends/GetWorkoutList.php";
+            JSON_URL = ServerConstants.CLOUD + "GetWorkoutList.php";
         }
 
         @Override

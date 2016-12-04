@@ -5,23 +5,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.bhastings.workoutwithfriends.FriendsListFragment"
-    android:background="@android:color/background_light"
+    android:background="@drawable/weights_background"
     android:backgroundTintMode="screen">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageView
+    <TextView
+        android:text="      All Users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/allusers"
-        android:id="@+id/imageView6" />
+        android:id="@+id/textView68"
+        android:textSize="24pt"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent1"/>
 
     <TextView
         android:text="Below is a list of all users who are signed up with Workout With Friends. Feel free to search for names you wish to connect with!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView33"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent5"/>
 
     <Space
         android:layout_width="match_parent"

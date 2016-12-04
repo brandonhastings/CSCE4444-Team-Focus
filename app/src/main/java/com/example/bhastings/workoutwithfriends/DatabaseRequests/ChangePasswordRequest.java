@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class ChangePasswordRequest extends StringRequest {
-    private static final String CHANGE_PASSWORD_URL = "http://10.10.10.99/workoutwfriends/ChangePassword.php";
+    private static final String CHANGE_PASSWORD_URL = ServerConstants.CLOUD + "ChangePassword.php";
     private Map<String, String> params;
 
     public ChangePasswordRequest(String username, String currentPassword, String password, Response.Listener listener){

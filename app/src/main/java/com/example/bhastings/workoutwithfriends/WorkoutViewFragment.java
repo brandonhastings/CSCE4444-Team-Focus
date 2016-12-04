@@ -28,7 +28,7 @@ import org.json.JSONObject;
 public class WorkoutViewFragment extends Fragment {
 
     Bundle bundle = new Bundle();
-    String username, name, page;
+    String username, friend, name, homeuser, page;
 
     String exercise1, exercise2, exercise3, exercise4, exercise5, exercise6, time1, time2, time3, time4, time5, time6;
     TextView tvExercise1, tvExercise2, tvExercise3, tvExercise4, tvExercise5, tvExercise6, tvOwner, tvWorkoutName,
@@ -44,10 +44,15 @@ public class WorkoutViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        homeuser = this.getArguments().getString("homeuser");
         username = this.getArguments().getString("username");
+        friend = this.getArguments().getString("friend");
+        bundle.putString("friend", friend);
         name = this.getArguments().getString("name");
         page = this.getArguments().getString("page");
+
         bundle.putString("username", username);
+        bundle.putString("homeuser", homeuser);
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_workout_view, container, false);
@@ -150,12 +155,12 @@ public class WorkoutViewFragment extends Fragment {
             }
         };
 
-
-
         Button backButton = (Button) view.findViewById(R.id.bWorkoutViewBack);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 if(page.equals("ViewProfile")){
                     Fragment vProfile = new ProfileFragment();
                     vProfile.setArguments(bundle);
@@ -176,6 +181,7 @@ public class WorkoutViewFragment extends Fragment {
                 }
                 else if(page.equals("ViewFriendProfile")){
                     Fragment vFriendProfile = new FriendProfileFragment();
+                //    bundle.putString("username", homeuser);
                     vFriendProfile.setArguments(bundle);
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

@@ -12,12 +12,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.bhastings.workoutwithfriends.LoginActivity"
     android:weightSum="1"
-    android:background="@android:color/background_light">
+    android:background="@drawable/frs">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        app:srcCompat="@drawable/app_logo"
+        app:srcCompat="@drawable/logo"
         android:id="@+id/imageView7" />
 
     <Space
@@ -31,11 +31,13 @@
         android:ems="10"
         android:id="@+id/etUsername"
         android:hint="Username"
+        android:textColorHint="@color/colorAccent1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="?attr/colorBackgroundFloating" />
 
     <EditText
         android:layout_width="match_parent"
@@ -48,7 +50,9 @@
         android:id="@+id/etPassword"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="Password" />
+        android:hint="Password"
+        android:textColorHint="@color/colorAccent1"
+        android:textColor="?attr/colorBackgroundFloating" />
 
     <Button
         android:text="Login"
@@ -65,6 +69,7 @@
 
     <TextView
         android:text="Register Here"
+        android:textColor="@color/colorAccent1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bLogin"
@@ -79,6 +84,7 @@
 
     <TextView
         android:text="Exercise and calorie information for calculations are referenced from BodyBuilding.com"
+        android:textColor="@color/colorAccent1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView43"

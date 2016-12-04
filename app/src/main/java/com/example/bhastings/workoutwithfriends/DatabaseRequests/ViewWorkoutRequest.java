@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class ViewWorkoutRequest extends StringRequest {
-    private static  final String VIEW_WORKOUT_REQEUST_URL = "http://10.10.10.99/workoutwfriends/WorkoutView.php";
+    private static  final String VIEW_WORKOUT_REQEUST_URL = ServerConstants.CLOUD + "WorkoutView.php";
     private Map<String, String> params;
 
     public ViewWorkoutRequest(String username, String name, Response.Listener listener){

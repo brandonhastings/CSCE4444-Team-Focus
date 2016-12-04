@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class ChangeUsernameRequest extends StringRequest {
-    private static final String CHANGE_USERNAME_URL = "http://10.10.10.99/workoutwfriends/ChangeUsername.php";
+    private static final String CHANGE_USERNAME_URL = ServerConstants.CLOUD + "ChangeUsername.php";
     private Map<String, String> params;
 
     public ChangeUsernameRequest(String username, String newusername, Response.Listener listener){

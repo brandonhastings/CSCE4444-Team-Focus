@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class CaloriesBurnedRequest extends StringRequest {
-    private static final String WORKOUT_STATS_REQUEST_URL = "http://10.10.10.99/workoutwfriends/GetCalories.php";
+    private static final String WORKOUT_STATS_REQUEST_URL = ServerConstants.CLOUD + "GetCalories.php";
     private Map<String, String> params;
 
     public CaloriesBurnedRequest(String username, String name, Response.Listener listener){

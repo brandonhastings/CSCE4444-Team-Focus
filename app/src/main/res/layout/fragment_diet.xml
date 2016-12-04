@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bhastings.workoutwithfriends.DietFragment">
+    tools:context="com.example.bhastings.workoutwithfriends.DietFragment"
+    android:background="@drawable/food_background">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -25,15 +26,16 @@
                 android:layout_weight="0.19"
                 android:layout_width="50dp">
 
-             <TextView
+                <TextView
                 android:text="Breakfast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvBreakfastHeader"
-                android:textSize="30sp"
-                  />
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent5"    />
 
-             <TextView
+                <TextView
                 android:text="Total Calories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,16 +50,18 @@
                   android:id="@+id/tvBreakfastCalories"
                     android:textSize="36sp" />
 
-               <Space
-                  android:layout_width="match_parent"
-                  android:layout_height="70dp" />
+                <Space
+                   android:layout_width="match_parent"
+                   android:layout_height="70dp" />
 
                 <TextView
                    android:text="Lunch"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:id="@+id/tvLunchHeader"
-                   android:textSize="30sp" />
+                   android:textSize="38sp"
+                    android:textStyle="bold"
+                   android:textColor="@color/colorAccent5" />
 
             <TextView
                 android:text="Total Calories"
@@ -65,24 +69,26 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tvSubHeader2" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/tvLunchCalories"
-                android:textSize="36sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/tvLunchCalories"
+                    android:textSize="36sp" />
 
-            <Space
+                <Space
                 android:layout_width="match_parent"
                 android:layout_height="70dp" />
 
-            <TextView
+                <TextView
                 android:text="Dinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvDinnerHeader"
-                android:textSize="30sp" />
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent5"    />
 
             <TextView
                 android:text="Total Calories"
@@ -90,13 +96,13 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tvSubHeader3" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/tvDinnerCalories"
-                android:layout_height="50dp"
-                android:textSize="36sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/tvDinnerCalories"
+                    android:layout_height="50dp"
+                    android:textSize="36sp" />
 
                 <Space
                 android:layout_width="match_parent"
@@ -107,7 +113,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvSnacksHeader"
-                android:textSize="30sp" />
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent5" />
 
             <TextView
                 android:text="Total Calories"

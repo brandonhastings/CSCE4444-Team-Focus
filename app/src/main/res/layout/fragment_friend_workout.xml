@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bhastings.workoutwithfriends.FriendWorkoutFragment">
+    tools:context="com.example.bhastings.workoutwithfriends.FriendWorkoutFragment"
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -19,7 +20,8 @@
             android:id="@+id/tvWorkoutName"
             android:textAlignment="center"
             android:textSize="30sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:textColor="@color/colorAccent1"/>
 
         <Space
             android:layout_width="match_parent"
@@ -49,10 +51,6 @@
                 style="@android:style/Widget.Button.Inset" />
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -63,7 +61,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/creator"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.05"
+                android:textColor="@color/colorAccent1"
+                android:textSize="18sp"/>
 
             <TextView
                 android:text=""
@@ -74,9 +74,12 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
-        <Space
+        <TextView
+            android:text="___________________________________________________________"
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="wrap_content"
+            android:id="@+id/textView71"
+            android:textColor="@color/colorAccent4"/>
 
         <TextView
             android:text="Exercise 1:"

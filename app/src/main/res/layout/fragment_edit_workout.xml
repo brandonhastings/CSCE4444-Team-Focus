@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,23 +23,30 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="25dp" />
+            android:layout_height="13dp" />
 
-        <ImageView
+        <TextView
+            android:text="     Edit Workout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/editworkout"
-            android:id="@+id/imageView5" />
+            android:id="@+id/textView63"
+            android:textSize="20pt"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent1"/>
 
         <TextView
             android:text="Workout Information:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvWorkoutInfo" />
+            android:id="@+id/tvWorkoutInfo"
+            android:textSize="10pt" />
 
-        <Space
+        <TextView
+            android:text="___________________________________________________________"
             android:layout_width="match_parent"
-            android:layout_height="5dp" />
+            android:layout_height="wrap_content"
+            android:id="@+id/textView65"
+            android:textColor="@color/colorAccent4"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -47,11 +54,15 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/etEditWorkoutName"
-            android:hint="Name" />
+            android:hint="Name"
+            android:textColorHint="@color/colorAccent1"/>
 
-        <Space
+        <TextView
+            android:text="___________________________________________________________"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="wrap_content"
+            android:id="@+id/textView64"
+            android:textColor="@color/colorAccent4"/>
 
         <TextView
             android:text="Exercise 1:"

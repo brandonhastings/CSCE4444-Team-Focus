@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class DeleteWorkoutRequest extends StringRequest {
-private static final String NEW_WORKOUT_REQUEST_URL = "http://10.10.10.99/workoutwfriends/DeleteWorkout.php";
+private static final String NEW_WORKOUT_REQUEST_URL = ServerConstants.CLOUD + "DeleteWorkout.php";
     private Map<String, String> params;
 
     public DeleteWorkoutRequest(String username, String name, String exercise1, String time1, String exercise2, String time2, String exercise3, String time3,

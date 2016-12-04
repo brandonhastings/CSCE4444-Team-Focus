@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.bhastings.workoutwithfriends.RecordMealFragment"
-    android:background="@android:color/background_light"
+    android:background="@drawable/food_background"
     android:weightSum="1">
 
     <!-- TODO: Update blank fragment layout -->

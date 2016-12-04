@@ -21,6 +21,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.bhastings.workoutwithfriends.DatabaseRequests.ProfileRequest;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ServerConstants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -71,6 +72,7 @@ public class ProfileFragment extends Fragment {
         username = this.getArguments().getString("username");
         bundle.putString("username", username);
 
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
@@ -78,7 +80,7 @@ public class ProfileFragment extends Fragment {
 
         profilePic.setImageResource(R.drawable.no_pic);
 
-        if(username.equals("cjacobs")){
+        if(username.equals("cjacobs") || username.equals("cjacobs1")){
             profilePic.setImageResource(R.drawable.chase);
         }
         else if (username.equals("bhastings")){
@@ -95,6 +97,7 @@ public class ProfileFragment extends Fragment {
 
                 String value = (String) workoutList.getItemAtPosition(itemPosition);
                 String page = "ViewProfile";
+                bundle.putString("homeuser", username);
                 bundle.putString("name", value);
                 bundle.putString("page", page);
                 Fragment vWorkout = new WorkoutViewFragment();
@@ -194,7 +197,7 @@ public class ProfileFragment extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            JSON_URL = "http://10.10.10.99/workoutwfriends/GetWorkoutList.php";
+            JSON_URL = ServerConstants.CLOUD + "GetWorkoutList.php";
         }
 
         @Override

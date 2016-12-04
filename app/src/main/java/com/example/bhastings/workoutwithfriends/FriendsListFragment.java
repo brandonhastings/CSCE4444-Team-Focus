@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.bhastings.workoutwithfriends.DatabaseRequests.CheckIfFriends;
 import com.example.bhastings.workoutwithfriends.DatabaseRequests.ProfileRequest;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ServerConstants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -145,7 +146,7 @@ public class FriendsListFragment extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            JSON_URL = "http://10.10.10.99/workoutwfriends/GetUsersList.php";
+            JSON_URL = ServerConstants.CLOUD + "GetUsersList.php";
         }
 
         @Override

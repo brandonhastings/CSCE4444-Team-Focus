@@ -50,6 +50,8 @@ public class FriendWorkoutFragment extends Fragment {
         name = this.getArguments().getString("name");
         page = this.getArguments().getString("page");
         bundle.putString("username", username);
+        bundle.putString("friend", username);
+        bundle.putString("homeuser", homeuser);
 
 
         // Inflate the layout for this fragment

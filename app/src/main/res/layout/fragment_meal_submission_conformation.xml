@@ -4,16 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.bhastings.workoutwithfriends.MealSubmissionConformationFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/food_background">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:text="Diet Submission Complete!"
         android:layout_width="match_parent"
-        android:layout_height="153dp"
-        android:textAlignment="center"
-        android:id="@+id/tvHeading"
-        android:textSize="45sp"
-        android:background="@drawable/submissioncomplete" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textView72"
+        android:textSize="23pt"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent5"/>
 
     <LinearLayout
         android:orientation="horizontal"

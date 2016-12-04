@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class EditWorkoutRequest extends StringRequest {
-    private static final String EDIT_WORKOUT_REQEUST_URL = "http://10.10.10.99/workoutwfriends/EditWorkout.php";
+    private static final String EDIT_WORKOUT_REQEUST_URL = ServerConstants.CLOUD + "EditWorkout.php";
     private Map<String, String> params;
 
     public EditWorkoutRequest(String username, String name, String newname, String exercise1, String exercise2, String exercise3, String exercise4, String exercise5, String exercise6,

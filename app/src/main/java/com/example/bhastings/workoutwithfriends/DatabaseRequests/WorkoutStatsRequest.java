@@ -13,7 +13,7 @@ import java.util.Map;
  */
 
 public class WorkoutStatsRequest extends StringRequest {
-    private static final String WORKOUT_STATS_REQUEST_URL = "http://10.10.10.99/workoutwfriends/WorkoutStats.php";
+    private static final String WORKOUT_STATS_REQUEST_URL = ServerConstants.CLOUD + "WorkoutStats.php";
     private Map<String, String> params;
 
     public WorkoutStatsRequest(String username, Response.Listener listener){

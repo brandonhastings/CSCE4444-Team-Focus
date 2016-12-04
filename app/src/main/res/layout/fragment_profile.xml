@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -20,15 +20,7 @@
             android:layout_width="250dp"
             android:layout_height="200dp"
             android:id="@+id/ivProfilePic"
-            android:src="@drawable/brandon" />
-
-        <TextView
-            android:text="Hint: To upload a photo, click on the image then select your picture. Click Upload photo to save the image for your profile."
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView32"
-            android:textAlignment="center"
-            android:textSize="12sp" />
+            android:src="@drawable/no_pic" />
 
         <Button
             android:text="Upload Photo"
@@ -47,7 +39,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvEditProfile"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent5"/>
 
         <Space
             android:layout_width="match_parent"

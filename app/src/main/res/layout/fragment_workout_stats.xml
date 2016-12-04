@@ -5,7 +5,8 @@
     tools:context="com.example.bhastings.workoutwithfriends.WorkoutStatsFragment"
     android:scrollbarAlwaysDrawHorizontalTrack="false"
     android:scrollX="0dp"
-    android:scrollY="0dp">
+    android:scrollY="0dp"
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
 

@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bhastings.workoutwithfriends.FriendDietStatsFragment">
-
+    tools:context="com.example.bhastings.workoutwithfriends.FriendDietStatsFragment"
+    android:background="@drawable/food_background" >
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:orientation="vertical"
@@ -28,11 +28,13 @@
             android:layout_height="5dp" />
 
         <TextView
-            android:text="Here are your diet stats for today"
+            android:text="          Here are your diet stats for today"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvMessage"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent4"
+            android:textStyle="bold"/>
 
         <Space
             android:layout_width="match_parent"
@@ -43,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvAvgDailyIntake"
-            android:textSize="10sp"/>
+            android:textSize="15sp"/>
 
         <TextView
             android:layout_width="match_parent"

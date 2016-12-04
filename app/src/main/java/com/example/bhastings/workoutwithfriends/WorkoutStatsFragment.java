@@ -291,7 +291,7 @@ public class WorkoutStatsFragment extends Fragment {
                             seriesRenderer.setColor(colors[i]);
                             //   seriesRenderer.setDisplayChartValues(true);
 
-                            defaultRenderer.setBackgroundColor(Color.WHITE);
+                           // defaultRenderer.setBackgroundColor(Color.WHITE);
                             defaultRenderer.setLabelsTextSize(30f);
                             defaultRenderer.setLabelsColor(Color.BLACK);
                             defaultRenderer.setLegendTextSize(25f);

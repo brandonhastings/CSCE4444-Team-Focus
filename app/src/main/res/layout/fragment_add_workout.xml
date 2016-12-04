@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,7 +8,8 @@
     style="@android:style/Widget.DeviceDefault.Light.ScrollView"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:clipToPadding="true">
+    android:clipToPadding="true"
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -21,10 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="15dp" />
 
-        <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:background="@drawable/trackworkout" />
+        <TextView
+            android:text="Track Your Workout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView66"
+            android:textColor="@color/colorAccent1"
+            android:textStyle="bold"
+            android:textSize="17pt"/>
 
         <Space
             android:layout_width="match_parent"
@@ -61,16 +67,17 @@
         android:id="@+id/bSubmit"
         style="@android:style/Widget.Button.Inset" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="261dp"
+            app:srcCompat="@drawable/runner"
+            android:id="@+id/imageView5" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
 
-        <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="264dp"
-        android:background="@drawable/runner" />
-
-    <TextView
+        <TextView
         android:text="Go for a Run!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

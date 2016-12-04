@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.DietViewFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/food_background">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,13 +13,13 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:text="  Diet Manager"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:background="@drawable/dietmanager"
-            android:layout_gravity="center_horizontal"/>
+            android:id="@+id/textView67"
+            android:textSize="24pt"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent5"/>
 
         <Space
             android:layout_width="match_parent"

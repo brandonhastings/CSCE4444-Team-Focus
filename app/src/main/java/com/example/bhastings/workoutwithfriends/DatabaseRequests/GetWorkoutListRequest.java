@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class GetWorkoutListRequest extends StringRequest{
-    private static final String GET_WORKOUT_LIST_REQUEST_URL = "http://10.10.10.99/workoutwfriends/GetWorkoutList.php";
+    private static final String GET_WORKOUT_LIST_REQUEST_URL = ServerConstants.CLOUD + "GetWorkoutList.php";
     private Map<String, String> params;
 
     public GetWorkoutListRequest(String username, String name, Response.Listener listener){

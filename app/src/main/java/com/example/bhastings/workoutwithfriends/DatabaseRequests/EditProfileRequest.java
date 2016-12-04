@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class EditProfileRequest extends StringRequest {
 
-    private static final String EDIT_PROFILE_REQUEST_URL = "http://10.10.10.99/workoutwfriends/EditProfile.php";
+    private static final String EDIT_PROFILE_REQUEST_URL = ServerConstants.CLOUD + "EditProfile.php";
     private Map<String, String> params;
 
     public EditProfileRequest(String username, String firstname, String lastname, String age, String weight, String height, String bio,  Response.Listener listener){

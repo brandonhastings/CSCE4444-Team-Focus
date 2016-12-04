@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -31,41 +31,71 @@
             android:id="@+id/bUploadPhoto" />
 
         <TextView
-            android:text="Exercise Information:"
+            android:text="             Exercise Information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvExerciseHeader"
-            android:textSize="12sp" />
+            android:textSize="24sp"
+            android:textColor="@color/colorAccent4"
+            />
+
+        <TextView
+            android:text="___________________________________________________________"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView54"
+            android:textColor="@color/colorAccent1"/>
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="39dp"
             android:inputType="number"
-            android:ems="10"
+            android:ems="7"
             android:id="@+id/etRepCount"
             android:hint="Reps" />
 
+        <TextView
+            android:text="___________________________________________________________"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView51"
+            android:textColor="@color/colorAccent1"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:ems="10"
+            android:ems="7"
             android:id="@+id/etSetCount"
             android:hint="Sets" />
 
-        <EditText
+        <TextView
+            android:text="___________________________________________________________"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etWeight"
-            android:hint="Weight" />
+            android:id="@+id/textView52"
+            android:textColor="@color/colorAccent1"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:ems="10"
+            android:ems="7"
+            android:id="@+id/etWeight"
+            android:hint="Weight" />
+
+        <TextView
+            android:text="___________________________________________________________"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView53"
+            android:textColor="@color/colorAccent1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="7"
             android:id="@+id/etTime"
             android:hint="Exercise Time Lenth (minutes)" />
 

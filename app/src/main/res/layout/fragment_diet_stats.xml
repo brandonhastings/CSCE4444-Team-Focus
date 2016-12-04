@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.DietStatsFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/food_background">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -33,7 +33,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvMessage"
-            android:textSize="18sp" />
+            android:textSize="22sp"
+            android:textColor="@color/colorAccent5"
+            android:textStyle="bold"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
@@ -44,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvAvgDailyIntake"
-            android:textSize="10sp"/>
+            android:textSize="15sp"/>
 
         <TextView
             android:layout_width="match_parent"

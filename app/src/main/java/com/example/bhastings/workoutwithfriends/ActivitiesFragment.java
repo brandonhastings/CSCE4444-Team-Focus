@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.bhastings.workoutwithfriends.DatabaseRequests.GetWorkoutListRequest;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ServerConstants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -139,7 +140,7 @@ public class ActivitiesFragment extends Fragment {
 
             @Override
             protected void onPreExecute() {
-                JSON_URL = "http://10.10.10.99/workoutwfriends/GetWorkoutList.php";
+                JSON_URL = ServerConstants.CLOUD + "GetWorkoutList.php";
             }
 
             @Override

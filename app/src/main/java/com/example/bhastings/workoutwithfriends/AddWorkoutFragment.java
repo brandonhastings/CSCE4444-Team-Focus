@@ -1,6 +1,7 @@
 package com.example.bhastings.workoutwithfriends;
 
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ServerConstants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -91,6 +94,18 @@ public class AddWorkoutFragment extends Fragment {
             }
         });
 
+
+        Button bGo = (Button) view.findViewById(R.id.button2);
+        bGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), GPSActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
@@ -100,7 +115,7 @@ public class AddWorkoutFragment extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            JSON_URL = "http://10.10.10.99/workoutwfriends/GetWorkoutList.php";
+            JSON_URL = ServerConstants.CLOUD + "GetWorkoutList.php";
         }
 
         @Override

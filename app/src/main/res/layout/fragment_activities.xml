@@ -1,9 +1,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/treadmills1">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -18,6 +19,7 @@
 
         <TextView
             android:text="Welcome to the Activities Center!"
+            android:textColor="@color/colorAccent1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvMessage1"
@@ -30,6 +32,7 @@
 
         <TextView
             android:text="Create your own workout or add exercises for your workouts!"
+            android:textColor="@color/colorAccent1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvMessage2"
@@ -41,11 +44,10 @@
             android:layout_height="25dp" />
 
         <ImageView
-            android:layout_gravity="center"
-            android:layout_width="279dp"
-            android:layout_height="100dp"
-            android:id="@+id/ivNewWorkoutImage"
-            android:src="@drawable/workouts"/>
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            app:srcCompat="@drawable/workouts"
+            android:id="@+id/imageView11" />
 
         <Space
             android:layout_width="match_parent"
@@ -65,15 +67,24 @@
 
         <TextView
             android:text="Your Workouts:"
+            android:textColor="@color/colorAccent1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvWorkoutsHeader" />
+            android:id="@+id/tvWorkoutsHeader"
+            android:textStyle="normal|bold" />
 
 
         <ListView
-            android:layout_width="match_parent"
             android:id="@+id/lvWorkouts"
-            android:layout_height="323dp" />
+            android:layout_height="249dp"
+            android:layout_gravity="center_horizontal"
+            android:cacheColorHint="@color/colorAccent1"
+            android:background="@color/colorAccent1"
+            android:layout_width="300dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
 
     </LinearLayout>

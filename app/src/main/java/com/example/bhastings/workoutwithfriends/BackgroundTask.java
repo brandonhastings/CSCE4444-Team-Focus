@@ -7,6 +7,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ServerConstants;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -41,8 +43,8 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
 
     @Override
     protected String doInBackground(String... params) {
-        String registrationURL = "http://10.0.2.2/workoutwfriends/Register.php";
-        String loginURL = "http://10.0.2.2/workoutwfriends/Login.php";
+        String registrationURL = ServerConstants.CLOUD + "Register.php";
+        String loginURL = ServerConstants.CLOUD + "Login.php";
         String method = params[0];
         if(method.equals("register")){
             String username = params[1];

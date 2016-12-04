@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="com.example.bhastings.workoutwithfriends.StatisticsFragment"
-    android:background="@android:color/background_light"
+    android:background="@drawable/weights_background"
     android:backgroundTintMode="screen">
 
     <!-- TODO: Update blank fragment layout -->
@@ -36,7 +36,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="177dp"
-            app:srcCompat="@drawable/stats_image"
+            app:srcCompat="@drawable/stats_image1"
             android:id="@+id/imageView2"
             android:layout_gravity="center_horizontal"/>
 

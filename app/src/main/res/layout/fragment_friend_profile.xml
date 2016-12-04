@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bhastings.workoutwithfriends.FriendProfileFragment">
+    tools:context="com.example.bhastings.workoutwithfriends.FriendProfileFragment"
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -14,7 +15,8 @@
             android:layout_gravity="center"
             android:layout_width="250dp"
             android:layout_height="200dp"
-            android:id="@+id/ivProfilePic" />
+            android:id="@+id/ivProfilePic"
+            android:src="@drawable/no_pic"/>
 
         <Space
             android:layout_width="match_parent"
@@ -95,7 +97,8 @@
             android:layout_height="wrap_content"
             android:text="Height:"
             android:textSize="14sp"
-            android:id="@+id/etHeight" />
+            android:id="@+id/etHeight"
+            />
 
         <TextView
             android:layout_width="match_parent"

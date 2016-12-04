@@ -13,7 +13,7 @@ import java.util.Map;
  */
 
 public class AddFriendRequest extends StringRequest{
-    private static final String ADD_FRIEND_URL = "http://10.10.10.99/workoutwfriends/AddFriend.php";
+    private static final String ADD_FRIEND_URL = ServerConstants.CLOUD + "AddFriend.php";
     private Map<String, String> params;
 
     public AddFriendRequest(String followee, String follower, Response.Listener<String> listener){

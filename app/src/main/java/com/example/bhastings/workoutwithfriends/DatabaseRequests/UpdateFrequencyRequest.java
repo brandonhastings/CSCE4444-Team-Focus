@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class UpdateFrequencyRequest extends StringRequest {
-    private static final String RECORD_MEAL_REQUEST = "http://10.10.10.99/workoutwfriends/UpdateFrequency.php";
+    private static final String RECORD_MEAL_REQUEST = ServerConstants.CLOUD + "UpdateFrequency.php";
     private Map<String, String> params;
 
     public UpdateFrequencyRequest(String username, String customname, String frequency, Response.Listener<String> listener){

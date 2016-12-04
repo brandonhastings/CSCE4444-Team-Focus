@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bhastings.workoutwithfriends.ProfileFragment"
-    android:background="@android:color/background_light">
+    android:background="@drawable/weights_background">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,7 +23,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvHeader"
             android:textAlignment="center"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:textColor="@color/colorAccent4"
+            android:textStyle="bold"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -41,10 +43,13 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/etTime"
-            android:hint="Exercise Time Lenth (minutes)" />
+            android:hint="Exercise Time Length (minutes)"
+            android:textColorHint="@color/colorAccent1"
+            android:textSize="19dp"
+            android:textStyle="bold"/>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="108dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView10"
             android:textSize="24sp"
@@ -62,7 +67,9 @@
             android:id="@+id/CaloriesBurnedheader"
             android:hint="Calories Burned"
             android:textSize="26sp"
-            android:text="Calories Burned per Minute" />
+            android:text="Calories Burned per Minute"
+            android:textColor="@color/colorAccent1"
+            android:textStyle="bold"/>
 
         <Space
             android:layout_width="match_parent"

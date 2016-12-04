@@ -19,6 +19,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.bhastings.workoutwithfriends.DatabaseRequests.CheckIfFriends;
+import com.example.bhastings.workoutwithfriends.DatabaseRequests.ServerConstants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -139,7 +140,7 @@ public class ViewFollowersFragment extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            JSON_URL = "http://10.10.10.99/workoutwfriends/GetFollowersList.php";
+            JSON_URL = ServerConstants.CLOUD + "GetFollowersList.php";
         }
 
         @Override
